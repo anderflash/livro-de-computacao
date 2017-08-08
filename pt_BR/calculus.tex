@@ -1,5 +1,56 @@
 % !TeX root = main.tex
 \part{Cálculo}
+\section{Introdução}
+
+\subsection{O problema da área}
+Há 2500 anos, os gregos encontraram áreas através do método da exaustão, onde se divide um polígono em triângulos para encontrar a área $A$, como na Figura~\ref{fig:polygon-area-division}. Mas e a área de uma figura curva?  Figura~\ref{fig:circle-polygon-approximation} mostra que aumentando o número de lados do polígono inscrito, sua área se aproxima mais da área da curva (nesse caso um círculo). Podemos utilizar o mesmo raciocínio para encontrar a área de qualquer outra curva, como na Figura~\ref{fig:curve-approximation}. Este é um problema central para o \emph{cálculo integral}.\vspace{-0.6cm}
+\begin{figure}[!ht]
+  \subfloat[\label{fig:polygon-area-division}]{%
+    \includegraphics{calculus/polygon-area-division}  
+  }
+  \subfloat[\label{fig:circle-polygon-approximation}]{%
+    \includegraphics{calculus/circle-polygon-approximation}
+  }\\
+  \subfloat[\label{fig:curve-approximation}]{%
+    \includegraphics{calculus/curve-approximation}
+  }
+  
+  \caption{(a) $A = A_1+A_2+A_3+A_4+A_5$, (b) Encontrando a área do círculo através da aproximação do polígono, (c) Encontrar a área de uma curva através da aproximação do retângulo.}
+\end{figure}
+
+\subsection{O problema da tangente}
+Considere o problema de encontrar uma equação da linha tangente $t$ a uma curva com equação $y=f(x)$ em um ponto $P$ (Figura~\ref{fig:tangent-line}). Sabendo que $P$ incide sobre a tangente, basta encontrar a inclinação $m$. O problema é que precisamos de dois pontos para encontrar $m$ e só temos o ponto $P$ em $t$. Podemos encontrar uma aproximação obtendo um ponto próximo $Q$ da curva e calcular a inclinação $m_{PQ}$ da secante $PQ$. Da Figura~\ref{fig:secant-line}:
+\begin{equation}\label{eq:secant-slope}
+m_{PQ} =\frac{f(x)-f(a)}{x-a}
+\end{equation}
+Imagine $Q$ se movendo sobre a curva em direção a $P$ (Figura~\ref{fig:secant-line-tangent}). A secante se rotaciona e se aproxima da tangente como sua posição limite. Isto significa que o valor da inclinação $m_{PQ}$ se torna próximo da inclinação $m$ da tangente, ou seja $m=\lim_{Q\rightarrow P}m_{PQ}$. Como $x$ se aproxima de $a$, pela Eq.~\ref{eq:secant-slope}:\begin{equation}
+m=\lim_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}
+\end{equation}
+\vspace{-0.6cm}\begin{figure}[!ht]
+  \subfloat[\label{fig:tangent-line}]{\includegraphics{calculus/tangent-line}}%
+  \subfloat[\label{fig:secant-line}]{\includegraphics{calculus/secant-line}}%
+  \hspace{-0.3cm}\subfloat[\label{fig:secant-line-tangent}]{\includegraphics{calculus/secant-line-tangent}}
+\end{figure}
+
+O problema da tangente é fundamental para o \emph{cálculo diferencial}, inventado apenas 2000 anos após cálculo integral. As principais ideias por trás do cálculo diferencial foram do francês Pierre Fermat (1601-1665), desenvolvidas pelo inglês John Wallis (1616-1703), Isasc Barrow (1630-1677) e Isaac Newton (1642-1727), e pelo alemão Gottfried Leibniz (1646-1716). Há uma conexão forte entre esses dois problemas.
+
+\subsection{Velocidade}
+O que significa o velocímetro indicando 60km/h ? Sabemos que se a velocidade for constante, após uma hora viajaremos 60km. E se a velocidade variar? O que significa 60km/h em um dado instante? 
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|>{\columncolor{bookbluearea}}l|c|c|c|c|c|c|}\hline
+    t=Tempo gasto(s)&0&1&2&3&4&5\\\hline
+    d=Distância(m)&0&2&9&24&42&71\\\hline
+  \end{tabular}
+\end{table}
+
+\subsection{O limite de uma sequência}
+No 5º século A.C. o filósofo grego Zeno de Elea propôs 4 problemas, conhecidos como \emph{paradoxos de Zeno}, desafiando ideias de tempo e espaço na época.
+\subsection{Soma de uma série}
+a
+\subsection{Sumário}
+a
+
 \section{Funções e limites}
 \section{Derivadas}
 \section{Integrais}

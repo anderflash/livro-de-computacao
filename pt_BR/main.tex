@@ -7,10 +7,32 @@
 \usepackage[brazilian]{babel}
 \usepackage{fourier}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage[dvipsnames]{xcolor}
+\usepackage[dvipsnames]{xcolor, colortbl}
 \usepackage{tikz}
 \usepackage{subfig}
 \usepackage{abbrevs}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{hypcap}
+\hypersetup{pdftex,colorlinks=true,    linkcolor=black,          % color of internal links (change box color with linkbordercolor)
+  citecolor=green,        % color of links to bibliography
+  filecolor=magenta,      % color of file links
+  urlcolor=cyan           % color of external links}
+}
+
+\makeatletter
+\g@addto@macro\normalsize{%
+  \setlength\abovedisplayskip{4pt}
+  \setlength\belowdisplayskip{4pt}
+  \setlength\abovedisplayshortskip{4pt}
+  \setlength\belowdisplayshortskip{4pt}
+}
+\makeatother
+\titlespacing*{\section}
+{0pt}{0.8ex plus 0.5ex minus .2ex}{0.8ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{0.8ex plus 0.5ex minus .2ex}{0.8ex plus .2ex}
+\input{style}
 
 \setcounter{tocdepth}{1}
 
