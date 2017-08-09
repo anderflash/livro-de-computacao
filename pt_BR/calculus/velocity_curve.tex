@@ -1,0 +1,25 @@
+\documentclass[tikz,fontsize=8pt]{standalone}
+\input{../style}
+\usepackage{scrextend}
+\changefontsizes[8pt]{8pt}
+\usetikzlibrary{decorations.pathreplacing, calc}
+\begin{document}
+  \begin{tikzpicture}
+    \node at (-0.15,-0.2) {0};
+    \draw[->] (-0.5,0) -- (4.3,0) node[below] {$t$};
+    \draw[->] (0,-0.5) -- (0,2.3) node[left] {$d$};
+    
+    \draw[blackline,domain=0:2] plot (\x*2,{.5*(\x)^2});
+    \draw[pinkline] (0.256,-0.15) -- (4,1.15);
+    \draw[blueline] (0.52,-0.25) -- (3.8,1.65);
+    \fill (1.38,0.23) circle (0.4mm);
+    \fill (3.3,1.35) circle (0.4mm);
+    \node at (1,0.45) {$P(2,f(2))$};
+    \node at (2.7,1.5) {$Q(t,f(t))$};
+    \foreach \x in {0,...,4}{
+    	\pgfmathparse{int(\x+1)}\xdef\mya{\pgfmathresult}
+    	\draw (.7*\x+.69,-.08) -- (.7*\x+.69,.08);
+    	\node at (.7*\x+.69,-0.25) {\mya};
+    }
+  \end{tikzpicture}
+\end{document}

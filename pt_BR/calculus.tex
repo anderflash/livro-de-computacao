@@ -70,20 +70,35 @@ Temos a sensação que a velocidade instantânea em $t=2$ não é tão diferente
 \noindent Reduzindo o intervalo, a velocidade se aproxima de 10. Assim, esperamos que a velocidade instantânea em $t=2$ seja próximo de 10 m/s. Figura~\ref{fig:circle-polygon-approximation} mostra o deslocamento do carro em função do tempo. A velocidade média no intervalo [2,$t$] é $$\text{velocidade média} = \frac{\text{distância}}{\text{tempo}}=\frac{f(t)=f(2)}{t-2}$$
 que é igual à secante da Figura~\ref{fig:circle-polygon-approximation}. A velocidade instantânea $v$ quando $t=2$ é o valor limite desta velocidade média quanto $t$ se aproxima de 2, $$v=\lim_{t\rightarrow 2}\frac{f(t)-f(2)}{t-2}$$ e da Eq.~\ref{eq:tangent-slope} vemos que $v$ é a inclinação da tangente da curva em $P$.
 \begin{figure}[!ht]
-  \includegraphics{calculus/tangent-line}
+	\centering
+  \includegraphics{calculus/velocity_curve}
   \caption{Problema da tangente: (a) tangente, (b) secante, (c) secante se aproximando da tangente.}
 \end{figure}
 
 Podemos aplicar as mesmas técnicas de tangentes em cálculo diferencial não só em velocidades mas em todas as ciências sociais e naturais.
 
 \subsection{O limite de uma sequência}
-No 5º século A.C. o filósofo grego Zeno de Elea propôs 4 problemas, conhecidos como \emph{paradoxos de Zeno}, desafiando ideias de tempo e espaço na época. O 2º paradoxo diz respeito a uma corrida entre o herói grego Aquiles e uma tartaruga com vantagem inicial. Zeno argumentou que Aquiles nunca passaria a tartaruga: suponha que aquiles inicie na posição $a_1$ e a tartaruga em $t_1$ (Figura~\ref{fig:circle-polygon-approximation}). Quando Aquiles chega em $a_2 = t_1$, a tartaruga está em $t_2$. Quando Aquiles chega em $a_3=t_2$, a tartaruga está em $t_3$. Este processo continua indefinidamente, parecendo que a tartaruga sempre estará na frente, embora isto desafie nosso senso comum:
+No 5º século A.C. o filósofo grego Zenão de Eléia propôs 4 problemas, conhecidos como \emph{paradoxos de Zenão}, desafiando ideias de tempo e espaço na época. O 2º paradoxo diz respeito a uma corrida entre o herói grego Aquiles e uma tartaruga com vantagem inicial. Zenão argumentou que Aquiles nunca passaria a tartaruga: suponha que aquiles inicie na posição $a_1$ e a tartaruga em $t_1$ (Figura~\ref{fig:circle-polygon-approximation}). Quando Aquiles chega em $a_2 = t_1$, a tartaruga está em $t_2$. Quando Aquiles chega em $a_3=t_2$, a tartaruga está em $t_3$. Este processo continua indefinidamente, parecendo que a tartaruga sempre estará na frente, embora isto desafie nosso senso comum:
 \begin{figure}[!ht]
   \centering
-  \includegraphics{calculus/circle-polygon-approximation.pdf}
+  \begin{minipage}[b]{0.48\columnwidth}
+  	\centering
+  	\subfloat[\label{fig:achilles_tortoise}]
+  	{\includegraphics[width=\textwidth]{calculus/achilles_tortoise}}
+  	\vfill
+  	\subfloat[\label{fig:sequence_numerical_line}]
+  	{\includegraphics[width=\textwidth]{calculus/sequence_numerical_line}}
+  \end{minipage}
+	\sbox{\measurebox}{%
+		\begin{minipage}[b][\ht\measurebox]{0.48\columnwidth}
+			\subfloat[\label{fig:sequence_chart}]
+			{\includegraphics[width=\columnwidth]{calculus/sequence_chart}}
+	\end{minipage}}
+  \usebox{\measurebox}\qquad
+  \caption{(a) 2º paradoxo de Zenão, a corrida entre Aquiles e a tartaruga nunca alcançada, (b) sequência em uma linha numérica e (c) em um gráfico.-}
 \end{figure}
 
-\noindent Uma maneira de explicar este paradoxo é a ideia de \emph{sequência}. As posições sucessivas de Aquiles ($a_1$,$a_2$,$a_3$,$\dots$) ou da tartaruga ($t_1$,$t_2$,$t_3$,$\dots$) formam uma sequência. $\left\{1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5},\dots\right\}$ pode ser descrita pela seguinte expressão: $a_n=\frac{1}{n}$. Podemos visualizar esta sequência plotando seus termos em uma linha numérica (Figura~\ref{fig:circle-polygon-approximation}) ou num gráfico (Figura~\ref{fig:circle-polygon-approximation}). Observe que os termos se tornam mais próximos de 0 quando $n$ aumenta. Dizemos que o limite da sequência é 0, ou seja $$\lim_{n\rightarrow\infty}\frac{1}{n}=0$$
+\noindent Uma maneira de explicar este paradoxo é a ideia de \emph{sequência}. As posições sucessivas de Aquiles ($a_1$,$a_2$,$a_3$,$\dots$) ou da tartaruga ($t_1$,$t_2$,$t_3$,$\dots$) formam uma sequência. Em geral, uma sequência $\{a_n\}$ é um conjunto de números em ordem. Por exemplo, $\left\{1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5},\dots\right\}$ pode ser descrita pela expressão $a_n=\frac{1}{n}$. Podemos visualizar esta sequência plotando seus termos em uma linha numérica (Figura~\ref{fig:sequence_numerical_line}) ou num gráfico (Figura~\ref{fig:sequence_chart}). Observe que os termos se tornam mais próximos de 0 quando $n$ aumenta. Dizemos que o limite da sequência é 0, ou seja $$\lim_{n\rightarrow\infty}\frac{1}{n}=0$$
 Em geral, a notação $\lim_{n\rightarrow\infty}a_n=L$ é usada se os termos $a_n$ se aproximam do número $L$ quando $n$ aumenta.
 O conceito de limite de sequência ocorre toda vez que usamos a representação decimal de um número real. Por exemplo:
 \begin{table}[!ht]
@@ -95,10 +110,26 @@ O conceito de limite de sequência ocorre toda vez que usamos a representação 
   \end{tabular}
 \end{table}
 
-\noindent Então os termos desta sequência são aproximações racionais de $\pi$, ou seja, $\lim_{n\rightarrow \infty}a_n=\pi$. Voltando ao paradoxo de Zeno. As posições de Aquiles e da tartaruga formam sequências $\{a_n\}$ e $\{t_n\}$, onde $a_n<t_n$, para todo $n$. Pode-se mostrar que ambas as sequências têm o mesmo limite: $\lim_{n\rightarrow\infty}a_n=p=\lim_{n\rightarrow\infty}t_n$. É neste ponto $p$ onde Aquiles supera a tartaruga.
+\noindent Então os termos desta sequência são aproximações racionais de $\pi$, ou seja, $\lim_{n\rightarrow \infty}a_n=\pi$. Voltando ao paradoxo de Zenão. As posições de Aquiles e da tartaruga formam sequências $\{a_n\}$ e $\{t_n\}$, onde $a_n<t_n$, para todo $n$. Pode-se mostrar que ambas as sequências têm o mesmo limite: $\lim_{n\rightarrow\infty}a_n=p=\lim_{n\rightarrow\infty}t_n$. É neste ponto $p$ onde Aquiles supera a tartaruga.
 
 \subsection{Soma de uma série}
-a
+Outro paradoxo de Zenão, dito por Aristóteles, é o seguinte: "Um homem andando no meio da sala não conseguirá alcançar a parede". Para isso, ele passaria pela metade da distância, sobrando a outra metade. Isso aconteceria indefinidamente (Figura~\ref{fig:achilles_tortoise}).
+\begin{figure}[!ht]121cr
+	\centering
+	\includegraphics{calculus/wall}
+	\caption{Outro paradoxo de Zeno: o homem nunca alcança a parede.}
+\end{figure}
+Sabendo que o homem vai alcançar a parede, podemos expressar a distância total: $1=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\dots+\frac{1}{2^n}+\dots$. Zenão argumentava que não fazia sentido adicionar infinitamente muitos números, porém há outros casos mais claros de somas infinitas. Por exemplo, em notação decimal, o número $0,\overline{3} = 0,3333\dots$ é $\frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\dots=\frac{1}{3}$. De modo geral, se $d_n$ denota o $n$-ésimo dígito na representação decimal de um número, então $$0,d_1d_2d_3\dots = \frac{d_1}{10}+\frac{d_2}{10^2}+\frac{d_3}{10^3}+\dots+\frac{d_n}{10^n}+\dots$$
+Voltando ao paradoxo, definindo os termos da série como:$$\begin{aligned}
+s_1 &= \frac{1}{2}= 0,5\\
+s_2 &= \frac{1}{2}+\frac{1}{4} = 0,75\\
+s_3 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8} = 0,875\\
+s_4 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}=0.9375\\
+s_5 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}=0.96875\\
+s_6 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}=0.984375\\\vdots\\
+s_{16} &= \frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2^{16}}\sim 0,99998474
+\end{aligned}$$
+A soma parcial se torna próxima de 1. Aumentando $n$, $s_n$ se torna mais próximo de 1. Torna-se razoável definir a soma da série infinita como 1: $$\frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2^n} = 1$$. A razão por ser 1 é: $\lim_{n\rightarrow\infty}s_n=1$ 
 \subsection{Sumário}
 a
 

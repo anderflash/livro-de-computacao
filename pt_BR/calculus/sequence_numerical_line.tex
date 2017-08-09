@@ -1,0 +1,19 @@
+\documentclass[tikz]{standalone}
+\input{../style}
+\begin{document}
+  \begin{tikzpicture}
+  	\xdef\qtd{4}
+    \draw (-.3,0) -- (\qtd.3,0);
+		\fill [bookpink] (0,-0.1) rectangle (0.5,.1);
+    \node at (0,-0.3) {0};
+    \node at (\qtd,-0.3) {1};
+    \foreach \x in {1,...,18}{
+      \draw [bookpink](\qtd/\x,-0.1) -- (\qtd/\x,0.1);
+      
+    }
+  	\foreach \x in {1,...,4}{
+  		\node at (\qtd/\x,0.3) {$a_\x$};
+  	}
+    
+  \end{tikzpicture}
+\end{document}
