@@ -1,5 +1,7 @@
 \documentclass[tikz,fontsize=8pt]{standalone}
 \input{../style}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
 \usepackage{scrextend}
 \changefontsizes[8pt]{8pt}
 \usetikzlibrary{decorations.pathreplacing}
@@ -11,9 +13,21 @@
     
     \draw[blackline,domain=-1.1:0.5] plot (\x+1.5,{-(\x)^2+1.5});
     \draw[pinkline] (0.256,0.15) -- (1.356,1.91);
+    \draw[blueline] (0.256,0.65) -- (2.2,1.47);
+    \draw[blueline] (0.256,0.53) -- (2,1.77);
+    \draw[blueline] (0.256,0.38) -- (1.78,1.95);
     \fill (0.68,0.83) circle (0.4mm);
+    \fill (1.9,1.34) circle (0.4mm);
+    \fill (1.6,1.49) circle (0.4mm);
+    \fill (1.3,1.46) circle (0.4mm);
+    %\draw[blue,-{Latex[length=1mm]}] (2,1.38) arc (10:130:0.5cm);
+    \draw[bookgreen,-{Latex[length=1mm]}] (2,1.38) arc (10:50:0.5cm);
+    \draw[bookgreen,-{Latex[length=1mm]}] (1.88,1.64) arc (46:83:0.5cm);
+    \draw[bookgreen,-{Latex[length=1mm]}] (1.6,1.79) arc (80:123:0.5cm);
+
+    %\draw[->,>=stealth',semithick] (-30:1.2cm) arc (-30:30:1.2cm);
     \node at (0.5,0.83) {$P$};
     \node at (1.2,2) {$t$};
-    \node at (1.7,1) {$y=f(x)$};
+    \node at (1.85,1.15) {$Q$};
   \end{tikzpicture}
 \end{document}

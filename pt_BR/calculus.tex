@@ -1,13 +1,13 @@
 % !TeX root = main.tex
-\part{Cálculo}
+\clearpage\part{Cálculo}
 \section{Introdução}
 
 \subsection{O problema da área}
-Há 2500 anos, os gregos encontraram áreas através do método da exaustão, onde se divide um polígono em triângulos para encontrar a área $A$, como na Figura~\ref{fig:polygon-area-division}. Mas e a área de uma figura curva?  Figura~\ref{fig:circle-polygon-approximation} mostra que aumentando o número de lados do polígono inscrito, sua área se aproxima mais da área da curva (nesse caso um círculo). Podemos utilizar o mesmo raciocínio para encontrar a área de qualquer outra curva, como na Figura~\ref{fig:curve-approximation}. Este é um problema central para o \emph{cálculo integral}.\vspace{-0.6cm}
+Há 2500 anos, os gregos achavam áreas através do método da exaustão, dividindo um polígono em triângulos para achar a área $A$ (Figura~\ref{fig:polygon-area-division}). Mas e a área de uma figura curva?  Figura~\ref{fig:circle-polygon-approximation} mostra que aumentando o número de lados do polígono inscrito, sua área se aproxima da área do círculo. Podemos utilizar esta técnica para encontrar a área de qualquer outra curva (Figura~\ref{fig:curve-approximation}). Este é um problema central para o \emph{cálculo integral}.\vspace{-0.6cm}
 \begin{figure}[!ht]
   \subfloat[\label{fig:polygon-area-division}]{%
     \includegraphics{calculus/polygon-area-division}  
-  }
+  }\vspace{-0.3cm}
   \subfloat[\label{fig:circle-polygon-approximation}]{%
     \includegraphics{calculus/circle-polygon-approximation}
   }\\
@@ -23,19 +23,20 @@ Considere o problema de encontrar uma equação da linha tangente $t$ a uma curv
 \begin{equation}\label{eq:secant-slope}
 m_{PQ} =\frac{f(x)-f(a)}{x-a}
 \end{equation}
-Imagine $Q$ se movendo sobre a curva em direção a $P$ (Figura~\ref{fig:secant-line-tangent}). A secante se rotaciona e se aproxima da tangente como sua posição limite. Isto significa que o valor da inclinação $m_{PQ}$ se torna próximo da inclinação $m$ da tangente, ou seja $m=\lim_{Q\rightarrow P}m_{PQ}$. Como $x$ se aproxima de $a$, pela Eq.~\ref{eq:secant-slope}:\begin{equation}
+Imagine $Q$ se movendo sobre a curva em direção a $P$ (Figura~\ref{fig:secant-line-tangent}). A secante se rotaciona e se aproxima da tangente como sua posição limite. Isto significa que o valor da inclinação $m_{PQ}$ se torna próximo da inclinação $m$ da tangente, ou seja $m=\lim_{Q\rightarrow P}m_{PQ}$. Como $x$ se aproxima de $a$, pela Eq.~\ref{eq:secant-slope}:\begin{equation}\label{eq:tangent-slope}
 m=\lim_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}
 \end{equation}
 \vspace{-0.6cm}\begin{figure}[!ht]
   \subfloat[\label{fig:tangent-line}]{\includegraphics{calculus/tangent-line}}%
   \subfloat[\label{fig:secant-line}]{\includegraphics{calculus/secant-line}}%
   \hspace{-0.3cm}\subfloat[\label{fig:secant-line-tangent}]{\includegraphics{calculus/secant-line-tangent}}
+  \caption{Problema da tangente: (a) tangente, (b) secante, (c) secante se aproximando da tangente.}
 \end{figure}
 
 O problema da tangente é fundamental para o \emph{cálculo diferencial}, inventado apenas 2000 anos após cálculo integral. As principais ideias por trás do cálculo diferencial foram do francês Pierre Fermat (1601-1665), desenvolvidas pelo inglês John Wallis (1616-1703), Isasc Barrow (1630-1677) e Isaac Newton (1642-1727), e pelo alemão Gottfried Leibniz (1646-1716). Há uma conexão forte entre esses dois problemas.
 
 \subsection{Velocidade}
-O que significa o velocímetro indicando 60km/h ? Sabemos que se a velocidade for constante, após uma hora viajaremos 60km. E se a velocidade variar? O que significa 60km/h em um dado instante? 
+O que significa o velocímetro indicando 60km/h ? Sabemos que se a velocidade for constante, após uma hora viajaremos 60km. E se a velocidade variar? O que significa 60km/h em um dado instante? Vamos medir a distância a cada 1 segundo num exemplo:
 \begin{table}[!ht]
   \centering
   \begin{tabular}{|>{\columncolor{bookbluearea}}l|c|c|c|c|c|c|}\hline
@@ -44,8 +45,58 @@ O que significa o velocímetro indicando 60km/h ? Sabemos que se a velocidade fo
   \end{tabular}
 \end{table}
 
+\noindent Qual a velocidade média quando $2\leq t \leq 4$? $$\text{velocidade média} = \frac{\text{distância}}{\text{tempo}}=\frac{42-9}{4-2}=16,5 \text{m}/\text{s}$$
+Qual a velocidade média quando $2\leq t \leq 3$?
+$$\text{velocidade média} = \frac{\text{distância}}{\text{tempo}}=\frac{24-9}{3-2}=15 \text{m}/\text{s}$$
+Temos a sensação que a velocidade instantânea em $t=2$ não é tão diferente da velocidade média em intervalos curtos começando por $t=2$. Que tal medir a cada 0.1 segundo?
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|>{\columncolor{bookbluearea}}l|c|c|c|c|c|c|}\hline
+    t&2,0&2,1&2,2&2,3&2,4&2,5\\\hline
+    d&9,00&10,02&11,16&12,45&13,96&15,80\\\hline
+  \end{tabular}
+\end{table}
+
+\noindent Fazendo a mesma divisão a cada intervalo menor, teremos:
+\begin{table}[!ht]
+  \centering
+  \setlength\tabcolsep{0.15cm}
+  \begin{tabular}{|>{\columncolor{bookbluearea}}p{1.45cm}|c|c|c|c|c|c|}\hline
+    \footnotesize Intervalo de tempo    &[2-3]&[2-2,5]&[2-2,4]&[2-2,3]&[2-2,2]&[2-2,1]\\\hline
+    \footnotesize Velocidade média (m/s)&15,0&13,6&12,4&11,5&10,8&10,2\\\hline
+  \end{tabular}
+\end{table}
+
+\noindent Reduzindo o intervalo, a velocidade se aproxima de 10. Assim, esperamos que a velocidade instantânea em $t=2$ seja próximo de 10 m/s. Figura~\ref{fig:circle-polygon-approximation} mostra o deslocamento do carro em função do tempo. A velocidade média no intervalo [2,$t$] é $$\text{velocidade média} = \frac{\text{distância}}{\text{tempo}}=\frac{f(t)=f(2)}{t-2}$$
+que é igual à secante da Figura~\ref{fig:circle-polygon-approximation}. A velocidade instantânea $v$ quando $t=2$ é o valor limite desta velocidade média quanto $t$ se aproxima de 2, $$v=\lim_{t\rightarrow 2}\frac{f(t)-f(2)}{t-2}$$ e da Eq.~\ref{eq:tangent-slope} vemos que $v$ é a inclinação da tangente da curva em $P$.
+\begin{figure}[!ht]
+  \includegraphics{calculus/tangent-line}
+  \caption{Problema da tangente: (a) tangente, (b) secante, (c) secante se aproximando da tangente.}
+\end{figure}
+
+Podemos aplicar as mesmas técnicas de tangentes em cálculo diferencial não só em velocidades mas em todas as ciências sociais e naturais.
+
 \subsection{O limite de uma sequência}
-No 5º século A.C. o filósofo grego Zeno de Elea propôs 4 problemas, conhecidos como \emph{paradoxos de Zeno}, desafiando ideias de tempo e espaço na época.
+No 5º século A.C. o filósofo grego Zeno de Elea propôs 4 problemas, conhecidos como \emph{paradoxos de Zeno}, desafiando ideias de tempo e espaço na época. O 2º paradoxo diz respeito a uma corrida entre o herói grego Aquiles e uma tartaruga com vantagem inicial. Zeno argumentou que Aquiles nunca passaria a tartaruga: suponha que aquiles inicie na posição $a_1$ e a tartaruga em $t_1$ (Figura~\ref{fig:circle-polygon-approximation}). Quando Aquiles chega em $a_2 = t_1$, a tartaruga está em $t_2$. Quando Aquiles chega em $a_3=t_2$, a tartaruga está em $t_3$. Este processo continua indefinidamente, parecendo que a tartaruga sempre estará na frente, embora isto desafie nosso senso comum:
+\begin{figure}[!ht]
+  \centering
+  \includegraphics{calculus/circle-polygon-approximation.pdf}
+\end{figure}
+
+\noindent Uma maneira de explicar este paradoxo é a ideia de \emph{sequência}. As posições sucessivas de Aquiles ($a_1$,$a_2$,$a_3$,$\dots$) ou da tartaruga ($t_1$,$t_2$,$t_3$,$\dots$) formam uma sequência. $\left\{1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5},\dots\right\}$ pode ser descrita pela seguinte expressão: $a_n=\frac{1}{n}$. Podemos visualizar esta sequência plotando seus termos em uma linha numérica (Figura~\ref{fig:circle-polygon-approximation}) ou num gráfico (Figura~\ref{fig:circle-polygon-approximation}). Observe que os termos se tornam mais próximos de 0 quando $n$ aumenta. Dizemos que o limite da sequência é 0, ou seja $$\lim_{n\rightarrow\infty}\frac{1}{n}=0$$
+Em geral, a notação $\lim_{n\rightarrow\infty}a_n=L$ é usada se os termos $a_n$ se aproximam do número $L$ quando $n$ aumenta.
+O conceito de limite de sequência ocorre toda vez que usamos a representação decimal de um número real. Por exemplo:
+\begin{table}[!ht]
+  \centering
+  \setlength\tabcolsep{0.15cm}
+  \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+    $a_1$&$a_2$&$a_3$&$a_4$&$a_5$&$a_6$&$a_7$\\\hline
+    3,1&3,14&3,141&3,1415&3,14159&3,141592&3,1415926\\\hline
+  \end{tabular}
+\end{table}
+
+\noindent Então os termos desta sequência são aproximações racionais de $\pi$, ou seja, $\lim_{n\rightarrow \infty}a_n=\pi$. Voltando ao paradoxo de Zeno. As posições de Aquiles e da tartaruga formam sequências $\{a_n\}$ e $\{t_n\}$, onde $a_n<t_n$, para todo $n$. Pode-se mostrar que ambas as sequências têm o mesmo limite: $\lim_{n\rightarrow\infty}a_n=p=\lim_{n\rightarrow\infty}t_n$. É neste ponto $p$ onde Aquiles supera a tartaruga.
+
 \subsection{Soma de uma série}
 a
 \subsection{Sumário}
