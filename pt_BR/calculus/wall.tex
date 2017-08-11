@@ -1,20 +1,30 @@
 \documentclass[tikz]{standalone}
 \input{../style}
+\pgfdeclareimage{wall}{wall_only}
+\pgfdeclareimage[height=1cm]{person}{person_walking}
+\usetikzlibrary{decorations.pathreplacing}
+\newlength\imageheight
+\settoheight{\imageheight}{\pgfuseimage{person}}
 \begin{document}
   \begin{tikzpicture}
-  	\xdef\qtd{9};
-  	\xdef\st{1.2};
+    \node[minimum height=0cm, minimum width=0.4cm] at (8.83,0) {\pgfbox[center,bottom]{\pgfuseimage{wall}}};
+    \node[minimum height=\the\dimexpr\imageheight-0.1cm\relax, minimum width=0.6cm] at (0,1) {\pgfbox[center,top]{\pgfuseimage{person}}};
+  	\xdef\qtd{8.6};
+  	\xdef\st{1};
   	\draw (0,  0) -- (\qtd,  0);
-  	\draw (0,-1) -- (\qtd,-1);
-  	\node [text width=2cm, anchor=west] at (-0.3,.7) {Aquiles};
-  	\node [text width=2cm, anchor=west] at (-0.2,-0.4) {Tartaruga};
-  	\foreach \x in {1,...,5}{
-  		\fill[bookpink] ({\st*(\qtd - \qtd/\x)},0) circle (0.6mm);
-  		\node at ({\st*(\qtd-\qtd/\x)},0.3) {$a_\x$};
+  	%\draw (0,-1) -- (\qtd,-1);
+  	%\node [text width=2cm, anchor=west] at (-0.3,.7) {Aquiles};
+  	%\node [text width=2cm, anchor=west] at (-0.2,-0.4) {Tartaruga};
+  	\foreach \x in {1,...,10}{
+      \draw ({\st*(\qtd - \qtd/(2^\x))},-0.1) -- ({\st*(\qtd - \qtd/(2^\x))},0.1);
+  		%\fill[bookpink] ({\st*(\qtd - \qtd/\x)},0) circle (0.6mm);
   	}
-	  \foreach \x in {2,...,5}{
-	  	\fill[bookblue] ({\st*(\qtd -\qtd/\x)},-1) circle (0.6mm);
-	  	\node at ({\st*(\qtd-\qtd/\x)},-0.7) {$t_\x$};
-	  }
+    \foreach \x in {1,...,4}{
+      \pgfmathsetmacro\result{int(2^(\x))};
+      \draw [decorate,decoration={brace,mirror},xshift=-4pt,yshift=0pt]
+      ({\st*(\qtd-\qtd/(2^(\x-1)))+0.18},-0.2) -- ({\st*(\qtd-\qtd/(2^\x))+0.12},-0.2) node [bookpink,midway,yshift=-0.35cm] 
+      {\small $\frac{1}{\result}$};
+    }
+  
   \end{tikzpicture}
 \end{document}

@@ -67,7 +67,7 @@ Temos a sensação que a velocidade instantânea em $t=2$ não é tão diferente
   \end{tabular}
 \end{table}
 
-\noindent Reduzindo o intervalo, a velocidade se aproxima de 10. Assim, esperamos que a velocidade instantânea em $t=2$ seja próximo de 10 m/s. Figura~\ref{fig:circle-polygon-approximation} mostra o deslocamento do carro em função do tempo. A velocidade média no intervalo [2,$t$] é $$\text{velocidade média} = \frac{\text{distância}}{\text{tempo}}=\frac{f(t)=f(2)}{t-2}$$
+\noindent Reduzindo o intervalo, a velocidade se aproxima de 10. Assim, esperamos que a velocidade instantânea em $t=2$ seja próximo de 10 m/s. Figura~\ref{fig:circle-polygon-approximation} mostra o deslocamento do carro em função do tempo. A velocidade média no intervalo [2,$t$] é $$\text{velocidade média} = \frac{\text{distância}}{\text{tempo}}=\frac{f(t)-f(2)}{t-2}$$
 que é igual à secante da Figura~\ref{fig:circle-polygon-approximation}. A velocidade instantânea $v$ quando $t=2$ é o valor limite desta velocidade média quanto $t$ se aproxima de 2, $$v=\lim_{t\rightarrow 2}\frac{f(t)-f(2)}{t-2}$$ e da Eq.~\ref{eq:tangent-slope} vemos que $v$ é a inclinação da tangente da curva em $P$.
 \begin{figure}[!ht]
 	\centering
@@ -78,7 +78,7 @@ que é igual à secante da Figura~\ref{fig:circle-polygon-approximation}. A velo
 Podemos aplicar as mesmas técnicas de tangentes em cálculo diferencial não só em velocidades mas em todas as ciências sociais e naturais.
 
 \subsection{O limite de uma sequência}
-No 5º século A.C. o filósofo grego Zenão de Eléia propôs 4 problemas, conhecidos como \emph{paradoxos de Zenão}, desafiando ideias de tempo e espaço na época. O 2º paradoxo diz respeito a uma corrida entre o herói grego Aquiles e uma tartaruga com vantagem inicial. Zenão argumentou que Aquiles nunca passaria a tartaruga: suponha que aquiles inicie na posição $a_1$ e a tartaruga em $t_1$ (Figura~\ref{fig:circle-polygon-approximation}). Quando Aquiles chega em $a_2 = t_1$, a tartaruga está em $t_2$. Quando Aquiles chega em $a_3=t_2$, a tartaruga está em $t_3$. Este processo continua indefinidamente, parecendo que a tartaruga sempre estará na frente, embora isto desafie nosso senso comum:
+No 5º século A.C. o filósofo grego Zenão de Eléia propôs 4 problemas, conhecidos como \emph{paradoxos de Zenão}, desafiando ideias de tempo e espaço na época. O 2º paradoxo diz respeito a uma corrida entre o herói grego Aquiles e uma tartaruga com vantagem inicial. Zenão argumentou que Aquiles nunca passaria a tartaruga: suponha que Aquiles inicie na posição $a_1$ e a tartaruga em $t_1$ (Figura~\ref{fig:circle-polygon-approximation}). Quando Aquiles chega em $a_2 = t_1$, a tartaruga está em $t_2$ e quando chega em $a_3=t_2$, a tartaruga está em $t_3$. Este processo continua indefinidamente, parecendo que a tartaruga sempre estará na frente, mesmo desafiando o senso comum:
 \begin{figure}[!ht]
   \centering
   \begin{minipage}[b]{0.48\columnwidth}
@@ -114,10 +114,10 @@ O conceito de limite de sequência ocorre toda vez que usamos a representação 
 
 \subsection{Soma de uma série}
 Outro paradoxo de Zenão, dito por Aristóteles, é o seguinte: "Um homem andando no meio da sala não conseguirá alcançar a parede". Para isso, ele passaria pela metade da distância, sobrando a outra metade. Isso aconteceria indefinidamente (Figura~\ref{fig:achilles_tortoise}).
-\begin{figure}[!ht]121cr
+\begin{figure}[!ht]
 	\centering
 	\includegraphics{calculus/wall}
-	\caption{Outro paradoxo de Zeno: o homem nunca alcança a parede.}
+	\caption{Outro paradoxo de Zenão: o homem nunca alcança a parede.}
 \end{figure}
 Sabendo que o homem vai alcançar a parede, podemos expressar a distância total: $1=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\dots+\frac{1}{2^n}+\dots$. Zenão argumentava que não fazia sentido adicionar infinitamente muitos números, porém há outros casos mais claros de somas infinitas. Por exemplo, em notação decimal, o número $0,\overline{3} = 0,3333\dots$ é $\frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\dots=\frac{1}{3}$. De modo geral, se $d_n$ denota o $n$-ésimo dígito na representação decimal de um número, então $$0,d_1d_2d_3\dots = \frac{d_1}{10}+\frac{d_2}{10^2}+\frac{d_3}{10^3}+\dots+\frac{d_n}{10^n}+\dots$$
 Voltando ao paradoxo, definindo os termos da série como:$$\begin{aligned}
@@ -125,15 +125,126 @@ s_1 &= \frac{1}{2}= 0,5\\
 s_2 &= \frac{1}{2}+\frac{1}{4} = 0,75\\
 s_3 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8} = 0,875\\
 s_4 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}=0.9375\\
-s_5 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}=0.96875\\
-s_6 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}=0.984375\\\vdots\\
-s_{16} &= \frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2^{16}}\sim 0,99998474
+%s_5 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}=0.96875\\
+%s_6 &= \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}=0.984375\\
+\vdots\\
+s_{16} &= \frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2^{16}}\approx 0,99998474
 \end{aligned}$$
-A soma parcial se torna próxima de 1. Aumentando $n$, $s_n$ se torna mais próximo de 1. Torna-se razoável definir a soma da série infinita como 1: $$\frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2^n} = 1$$. A razão por ser 1 é: $\lim_{n\rightarrow\infty}s_n=1$ 
+A soma parcial se torna próxima de 1. Aumentando $n$, $s_n$ se torna mais próximo de 1. Torna-se razoável definir a soma da série infinita como 1: $$\frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2^n} = 1$$ A razão por ser 1 é: $\lim_{n\rightarrow\infty}s_n=1$. Usaremos as ideias de Newton para combinar séries infinitas com cálculo diferencial e integral. 
 \subsection{Sumário}
-a
+Vemos que o conceito de limites aparece ao tentar achar a área de uma região, a inclinação de uma tangente a uma curva, a velocidade do carro ou a soma de uma série infinita. O tema em comum é o cálculo de um número que é limite de outro calculado mais facilmente. Este conceito de limite diferencia o cálculo das outras áreas da matemática. Na verdade, podemos definir cálculo como a área da matemática que lida com limites. Após Sir Isaac Newton ter inventado sua versão do cálculo, ele o usou para explicar o movimento dos planetas em torno do sol. Hoje o cálculo é usado para calcular as órbitas dos satélites e espaçonaves, predizer tamanhos de populações, estimar taxa de variação do preço do petróleo, prever mudanças climáticas, medir batimento cardíaco, calcular seguros, e muitas outras áreas. As seguintes perguntas nos dizem o poder desta disciplina:
+\begin{enumerate}
+  \item Como podemos explicar que o ângulo de elevação de um observador até o topo do arco-íris é $42\degree$?
+  \item Como podemos explicar o formato das latas nas prateleiras de um supermercado?
+  \item Qual é o melhor lugar para se sentar em um cinema?
+  \item Como podemos projetar uma montanha russa de forma que seja totalmente suave?
+  \item O quão longe do aeroporto o piloto deve começar o pouso?
+  \item Como unir curvas para formar letras numa impressora a laser?
+  \item Como estimar o número de trabalhadores necessários para construir a Grande Pirâmide de Khufu no Egito Antigo?
+  \item Como podemos explicar o fato dos planetas e satélites se moverem em órbitas elípticas?
+  \item Como distribuir o fluxo de água nas turbinas de uma estação hidroelétrica para maximizar a produção de energia?
+\end{enumerate}
 
 \section{Funções e limites}
+Funções aparecem quando quantidades dependem de outras. Considere essas 4 situações:
+\begin{itemize}
+  \item A área $A$ de um círculo depende do raio $r$. A regra que conecta $r$ e $A$ é dada por: $A=\pi r^2$. Associa-se cada valor positivo de $r$ a um valor de $A$. Assim, $A$ é uma \emph{função} de $r$.
+  \item A população mundial $P$ depende do tempo $t$. A Tabela abaixo mostra estimativas de $P(t)$ no tempo $t$, para alguns anos. Por exemplo, $P(1950)\approx 2.560.000.000$. Para cada valor de $t$ há um correspondente de $P$ e $P$ é em função de $t$.\begin{table}[!ht]
+    \centering
+    \vspace{-0.25cm}
+    \setlength\tabcolsep{0.1cm}
+    \begin{tabular}{|>{\centering\columncolor{bookbluearea}}m{1.5cm}|c|c|c|c|c|c|c|c|}\hline
+      Ano&1940&1950&1960&1970&1980&1990&2000&2010\\\hline
+      População (milhões)&2300&2560&3040&3710&4450&5280&6080&6870\\\hline
+    \end{tabular}
+    \vspace{-0.25cm}
+  \end{table}
+  \item O custo $C$ de enviar um envelope depende do peso $p$. Embora não seja simples conectar $p$ e $C$, os correios definem uma regra para determinar $C$ quando $p$ é conhecido.
+  \item A aceleração vertical $a$ do terreno medido por um sismógrafo durante um terremoto é uma função do tempo $t$. Figura~\ref{fig:earthquake} mostra um gráfico da atividade sísmica durante o terremoto de Northidge que abalou Los Angeles em 1994. Para um dado valor de $t$, o gráfico mostra o valor de $a$.\vspace{-0.2cm}\begin{figure}[!ht]
+    \centering
+    \includegraphics{calculus/northridge-earthquake}
+    \caption{Aceleração vertical do terreno durante o terremoto de Northridge.}
+    \label{fig:earthquake}
+  \end{figure}
+\end{itemize}
+Em todos os casos, dizemos que o segundo valor ($A$, $P$, $C$ ou $a$) é uma função do primeiro ($r$,$t$,$p$ ou $t$). Uma \textbf{função} $f$ é uma regra que atribui a cada elemento $x$ em um conjunto $D$ exatamente um elemento, chamado $f(x)$, em um conjunto $E$. De forma compacta, $f:D\rightarrow E$. Geralmente $D=\mathds{R}$ e $E=\mathds{R}$ (números reais). $D$ é o \textbf{domínio} da função e $E$ é o \textbf{contradomínio}. $f(x)$ é o \textbf{valor de $f$ em $x$} e se lê "$f$ de $x$". O símbolo que representa um número no domínio é a \textbf{variável independente}. O símbolo que representa um número na imagem é a \textbf{variável independente}.
+
+Uma função também pode ser interpretada como uma \textbf{máquina} (Figura~\ref{fig:machine-diagram}), aceitando um elemento $x$ do domínio da função $f$ na entrada e devolvendo a imagem $f(x)$ na saída. Um exemplo são as funções da calculadora.
+\begin{figure}[!ht]
+  \centering
+  \vspace{0.0cm}
+  \begin{minipage}[b]{0.3\columnwidth}
+    \centering
+    \subfloat[\label{fig:machine-diagram}]{\includegraphics[width=\columnwidth]{calculus/machine-diagram}}%
+    \vfill
+    \subfloat[\label{fig:arrow-diagram}]{\includegraphics[width=\columnwidth]{calculus/arrow-diagram}}%
+  \end{minipage}
+  \sbox{\measurebox}{%
+    \begin{minipage}[b][\ht\measurebox]{0.68\columnwidth}
+      \subfloat[\label{fig:graph}]{\includegraphics[width=0.54\columnwidth]{calculus/graph}}\hspace{0.01cm}
+      \subfloat[\label{fig:graph2}]{\includegraphics[width=0.41\columnwidth]{calculus/graph2}}
+  \end{minipage}}
+  \usebox{\measurebox}\qquad
+  \caption{Função como: (a) máquina, (b) diagrama de setas e (c) gráfico. (d) Domínio e imagem de uma função.}
+\end{figure}
+
+Outra interpretação de $f$ é como um \textbf{diagrama de setas} (Figura~\ref{fig:arrow-diagram}), conectando domínio $D$ e imagem $E$, associando $a$ e $f(a)$, $x$ e $f(x)$, etc. Por fim, a interpretação mais comum é como um \textbf{gráfico} (Figura~\ref{fig:graph}), mostrando pares ordenados $\left\{(x,f(x)):x\in D\right\}$ como pontos (x,y) num plano de coordenadas, ilustrando a "história de vida" de $f$ e podendo indicar também o domínio e a imagem (Figura~\ref{fig:graph2}).
+
+\example{1} Seja $f$ do gráfico da Figura~\ref{fig:graph}.
+\begin{enumerate}[label=(\alph*)]
+  \item Encontre os valores de $f(1)$ e $f(5)$.
+  \item Qual é o domínio e imagem de $f$?
+\end{enumerate}
+\solution
+\begin{enumerate}[label=(\alph*)]
+  \item Vemos que o ponto (1, 3) está no gráfico de $f$, então $f(1) = 3$. Contando 5 unidades no eixo $x$, $f(5)$ se situa cerca de 0.7 unidades abaixo do eixo $y$ ($f(5)\approx-0.7$).
+  \item $f(x)$ é definido quando $0\leq x \leq 7$, então o domínio é o intervalo [0,7]. Veja que f é definido quando $-2\leq y \leq 4$, então a imagem é o intervalo [-2,4].
+\end{enumerate}
+
+\example{2} Desenhe o gráfico e ache o domínio e imagem de:
+\vspace{-0.7cm}\begin{multicols}{2}
+  \begin{enumerate}[label=(\alph*)]
+    \item $f(x)=2x-1$
+    \item $g(x)=x^2$
+  \end{enumerate}
+\end{multicols}\vspace{-0.3cm}
+\solution
+\begin{enumerate}[label=(\alph*)]
+  \item A equação do gráfico é $y=2x-1$, uma linha de inclinação 2 e intercepto -1. Figura~\ref{fig:ex2-line} mostra o gráfico de $f$. A expressão $2x-1$ é definida para todos os números reais, então o domínio de $f$ é $\mathds{R}$. Veja que a imagem também é $\mathds{R}$.
+  \item Como $g(2)= 2^2 = 4$ e $g(-1) = (-1)^2 = 1$, podemos plotar os pontos $(2,4)$ e $(-1,1)$, e uni-los com outros pontos no gráfico (Figura~\ref{fig:ex2-parabola}). A equação do gráfico é $y=x^2$, que representa uma parábola. O domínio de $g$ é $\mathds{R}$. A imagem de $g$ consiste em todos os valores de $g(x)$, ou seja, todos os números na forma $x^2$. Mas $x^2\geq 0, \forall x$. Assim, a imagem de $g$ é $\{y:y\geq 0\} = [0,\infty)$.\vspace{-0.3cm}
+\end{enumerate}
+\begin{figure}[!ht]
+  \centering
+  \subfloat[\label{fig:ex2-line}]{\includegraphics{calculus/ex2-line}}%
+  \subfloat[\label{fig:ex2-parabola}]{\includegraphics{calculus/ex2-parabola}}%
+  \caption{Gráficos do EXEMPLO 2}
+\end{figure}\vspace{-0.4cm}
+\example{3} Se $f(x)=2x^2-5x+1$ e $h\neq 0$, avalie $\displaystyle\frac{f(a+h)-f(a)}{h}$ o qual é denominada \textbf{quociente diferencial}, a taxa de variação de f(x) entre $x=a$ e $x=a+h$
+
+\solution
+
+\noindent Obtemos $f(a+h)$ trocando $x$ por $a+h$ na equação de $f(x)$:
+$$
+\begin{aligned}
+f(a+h) &=2(a+h)^2-5(a+h)+1\\
+&= 2(a^2+2ah+h^2)-5(a+h)+1\\
+&=2a^2+4ah+2h^2-5a-5h+1
+\end{aligned}
+$$
+Então substituímos na expressão dada e o simplificamos: $$
+\begin{aligned}
+\frac{f(a+h)-f(a)}{h} &= \frac{(2a^2+4ah+2h^2-5a-5h+1)-(2a^2-5a+1)}{h}\\
+&=\frac{2a^2+4ah+2h^2-5a-5h+1-2a^2+5a-1}{h}\\
+&=\frac{4ah+2h^2-5h}{h}=4a+2h-5
+\end{aligned}
+$$
+\subsection{Representação de funções}
+Há 4 formas de representar uma função: verbalmente (por uma descrição em palavras), numericamente (por uma tabela de valores), visualmente (por um gráfico) e algebricamente (por uma fórmula explícita). É interessante saber como mudar representações de uma dada função (No Exemplo 2 iniciamos com fórmulas algébricas e obtivemos os gráficos).
+
+A representação mais útil da área de um círculo como função do raio é provavelmente a fórmula algébrica $A(r)=\pi r^2$, embora seja possível compilar uma tabela de valores ou desenhar um gráfico (metade uma parábola).
+
+A
+
 \section{Derivadas}
 \section{Integrais}
 \section{Funções inversas}
