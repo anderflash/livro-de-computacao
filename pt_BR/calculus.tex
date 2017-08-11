@@ -241,9 +241,55 @@ $$
 \subsection{Representação de funções}
 Há 4 formas de representar uma função: verbalmente (por uma descrição em palavras), numericamente (por uma tabela de valores), visualmente (por um gráfico) e algebricamente (por uma fórmula explícita). É interessante saber como mudar representações de uma dada função (No Exemplo 2 iniciamos com fórmulas algébricas e obtivemos os gráficos).
 
-A representação mais útil da área de um círculo como função do raio é provavelmente a fórmula algébrica $A(r)=\pi r^2$, embora seja possível compilar uma tabela de valores ou desenhar um gráfico (metade uma parábola).
+A representação mais útil da área de um círculo como função do raio é provavelmente a fórmula algébrica $A(r)=\pi r^2$, embora seja possível compilar uma tabela de valores ou desenhar um gráfico (metade uma parábola). O domínio é $\{r:r>0\}=(0,\infty)$ e a imagem também é $(0,\infty)$.
 
-A
+Um exemplo de descrição de uma função verbalmente seria: $P(t)$ é a população humana mundial no tempo $t$. Seja $t=0$ correspondendo ao ano 1900. Podemos gerar uma tabela de valores e logo em seguida um gráfico de dispersão (Figura~\ref{fig:population-scatter}), que nos ajuda a entender todos os dados de uma vez. Falta só a fórmula que descreva de forma exata a população, o que pode ser impossível. Mas podemos encontrar uma fórmula que se aproxima de $P(t)$: $P(t) \approx f(t) = (1,43653\times 10^9)\cdot(1,01395)^t$. Figura~\ref{fig:population-scatter-fit} mostra que f(t) é um bom "ajuste". A função $f$ é um \emph{modelo matemático} para o crescimento populacional. Em outras palavras, é uma função com uma fórmula explícita que aproxima o comportamento de uma dada função. Contudo, veremos que as ideias do cálculo podem ser aplicadas a uma tabela de valores; uma fórmula explícita não é necessária.
+\begin{figure}[!ht]
+	\centering
+	\subfloat[\label{fig:population-scatter}]{\includegraphics{calculus/ex2-line}}%
+	\subfloat[\label{fig:population-scatter-fit}]{\includegraphics{calculus/ex2-parabola}}%
+	\caption{Gráficos do EXEMPLO 2}
+\end{figure}
+
+A função $P$ é típica de funções que aparecem no mundo real. Começamos com uma descrição verbal (uma hipótese), depois realizamos observações e medições utilizando aparatos e métodos científicos, criando uma tabela de valores. Em seguida podemos derivar uma função aproximada ou aplicar operações de cálculo, mesmo que não tenhamos o total conhecimento do comportamento da função.
+
+Outro exemplo descrito em palavras: seja $C(p)$ o custo de enviar um envelope de peso $p$. A regra dos Correios para Carta Comercial (preço básico) é: 
+\begin{table}
+	\begin{tabular}{lccccc}
+		Peso & $p \leq 20$ & $20 > p \leq 50$ & $50 > p \leq 100$ & $100 > p \leq 150$ & $20 > p \leq 50$\\
+		Preço & $p \leq 20$ & $20 > p \leq 50$ & $50 > p \leq 100$ & $100 > p \leq 150$ & $20 > p \leq 50$\\
+	\end{tabular}
+\end{table}
+Até 20	1,80	6,10	10,40	12,00	16,30
+Mais de 20 até   50	2,55	6,85	11,15	12,75	17,05
+Mais de 50 até 100	3,50	7,80	12,10	13,70	18,00
+Mais de 100 até 150	4,25	8,55	12,85	14,45	18,75
+Mais de 150 até 200	5,05	9,35	13,65	15,25	19,55
+Mais de 200 até 250	5,85	10,15	14,45	16,05	20,35
+Mais de 250 até 300	6,65	10,95	15,25	16,85	21,15
+Mais de 300 até 350	7,45	11,75	16,05	17,65	21,95
+Mais de 350 até 400	8,20	12,50	16,80	18,40	22,70
+Mais de 400 até 450	9,00	13,30	17,60	19,20	23,50
+Mais de 450 até 500	9,80	14,10	18,40	20,00	24,30
+
+\subsection{Teste da linha vertical}
+
+A curva no plano $xy$ é o gráfico de uma função se e somente se nenhuma linha vertical intersecta a curva mais de uma vez. O caso contrário significa que a função mapeia um elemento do domínio para mais de um elemento da imagem, o que não pode acontecer. Por exemplo, a parábola $x = y^2-2$ da Figura~\ref{fig:achilles_tortoise} não é o gráfico de uma função pois há linhas verticais intersectando a parábola duas vezes. Na verdade, tal parábola é um gráfico de duas funções. Veja que $y^2=x+2$ e $y=\pm\sqrt{x+2}$, então a metade superior representa $f(x) = \sqrt{x+2}$; a inferior, $g(x)=-\sqrt{x+2}$. Revertendo os papeis de x e y (x sendo uma função h(y)), a parábola original se torna o gráfico da função h(y).
+\begin{figure}[!ht]
+	\centering
+	\subfloat[\label{fig:parabola-complete}]{\includegraphics{calculus/ex2-line}}%
+	\subfloat[\label{fig:parabola-half}]{\includegraphics{calculus/ex2-parabola}}%
+	\subfloat[\label{fig:parabola-other-halp}]{\includegraphics{calculus/ex2-parabola}}%
+	\caption{Gráficos do EXEMPLO 2}
+\end{figure}
+
+\example{7} A função $f$ é definida como $$f(x) = \begin{cases}
+1-x, & \text{ se } x \leq -1\\
+x^2, & \text{ se } x > -1\\
+\end{cases}$$
+Avalie $f(-2)$, $f(-1)$ e $f(0)$ e desenhe o gráfico.
+\solution
+Mesmo tendo duas regras diferentes, estamos tratando de uma só função, pois elas se referem a faixas diferentes no domínio (não se sobrepõem). A função devolve o valor de $y$ usando a primeira regra apenas se $x \leq 1$, aplicando a segunda regra caso contrário ($x > 1$).
 
 \section{Derivadas}
 \section{Integrais}
