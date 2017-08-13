@@ -17,10 +17,22 @@
 \usepackage{gensymb}
 \usepackage{booktabs, array}
 \usepackage{multicol}
+\usepackage{siunitx}
 \setlist{nosep}
 \usepackage{hypcap}
-\def\solution{\noindent\textcolor{bookpink}{SOLUÇÃO}}
-\def\example#1{\vspace{0.2cm}\noindent\textcolor{bookpink}{\textbf{EXEMPLO #1 - }}}
+\usepackage{adjustbox}
+\def\itemrange#1{%
+  \addtocounter{enumi}{1}%
+  \edef\labelenumi{\theenumi--\noexpand\theenumi}%
+  \addtocounter{enumi}{-1}%
+  \addtocounter{enumi}{#1}%
+  \item
+  \def\labelenumi{\theenumi}}
+\newcommand\NoIndent[1]{%
+  \par\vbox{\parbox[t]{\linewidth}{#1}}%
+}
+\def\solution{\noindent\textcolor{bookpink}{SOLUÇÃO}\hspace{2mm}}
+\def\example#1{\vspace{0.2cm}\noindent\textcolor{bookpink}{\textbf{EXEMPLO #1\hspace{1.8mm}}}}
 
 \newsavebox{\measurebox}
 
@@ -29,9 +41,11 @@
   filecolor=magenta,      % color of file links
   urlcolor=cyan           % color of external links}
 }
+\usepackage{bookmark}% http://ctan.org/pkg/bookmark
+\bookmarksetup{depth=3}
 \setlength{\abovecaptionskip}{2pt plus 3pt minus 2pt} % Chosen fairly arbitrarily
 
-\addtolength{\parskip}{-0.7mm}
+\addtolength{\parskip}{0mm}
 
 
 \makeatletter

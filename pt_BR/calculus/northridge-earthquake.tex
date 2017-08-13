@@ -1,19 +1,21 @@
 \documentclass[tikz,fontsize=8pt]{standalone}
-\input{../style}
 \usepackage{scrextend}
+\usepackage{pgfplots}
+\input{../style}
+
 \changefontsizes[8pt]{8pt}
 \usetikzlibrary{decorations.pathreplacing}
+\usepackage[utf8]{inputenc}
+\pgfplotsset{yticklabel style={
+    /pgf/number format/fixed,
+    /pgf/number format/precision=5
+  },
+  scaled x ticks=false}
 \begin{document}
   \begin{tikzpicture}
-  \node at (-0.15,-0.2) {0};
-  \draw[->] (-0.5,0) -- (2.3,0) node[below] {$x$};
-  \draw[->] (0,-0.5) -- (0,2.3) node[left] {$y$};
-  
-  \draw[blackline,domain=-1.1:0.5] plot (\x+1.5,{-(\x)^2+1.5});
-  \draw[pinkline] (0.256,0.15) -- (1.356,1.91);
-  \fill (0.68,0.83) circle (0.4mm);
-  \node at (0.5,0.83) {$P$};
-  \node at (1.2,2) {$t$};
-  \node at (1.7,1) {$y=f(x)$};
+  \begin{axis}[height=4.4cm,width=9cm,axis x line*=bottom,axis y line*=left, axis lines = middle,xlabel=tempo(ms),ylabel=aceleração($m/s^2$), x label style={at={(axis description cs:0.9,0.2)},anchor=north},
+  y label style={at={(axis description cs:-0.05,.5)},rotate=90,anchor=south},]
+  \addplot [bookblue] table [x=Time, y=Sensor3, col sep=comma, mark=none] {acceleration.csv};
+  \end{axis}
   \end{tikzpicture}
 \end{document}

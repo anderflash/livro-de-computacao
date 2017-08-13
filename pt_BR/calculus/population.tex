@@ -1,0 +1,26 @@
+\documentclass[tikz,fontsize=8pt]{standalone}
+\usepackage{scrextend}
+\usepackage{pgfplots}
+\input{../style}
+
+\changefontsizes[8pt]{8pt}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage[utf8]{inputenc}
+\begin{document}
+  \begin{tikzpicture}
+  
+  \begin{axis}[
+    height=4cm,
+    width=4.5cm,
+    axis x line*=bottom,
+    axis y line*=left, 
+    axis lines = middle,
+    xlabel=$t$,
+    ylabel=$P$, 
+    %x label style={at={(axis description cs:0.9,0.2)},anchor=north}, 
+    %y label style={at={(axis description cs:-0.05,.5)},rotate=0,anchor=south}
+    ]
+  \addplot [only marks, color=bookblue] table [x=X, y=Y,col sep=comma] {population.csv};
+  \end{axis}
+  \end{tikzpicture}
+\end{document}

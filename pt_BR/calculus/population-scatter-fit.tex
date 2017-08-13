@@ -1,0 +1,30 @@
+\documentclass[tikz,fontsize=8pt]{standalone}
+\usepackage{scrextend}
+\usepackage{pgfplots}
+\input{../style}
+
+\changefontsizes[8pt]{8pt}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage[utf8]{inputenc}
+\begin{document}
+  \begin{tikzpicture}
+  
+  \begin{axis}[
+    height=4cm,
+    width=5.3cm,
+    axis x line*=bottom,
+    axis y line*=left, 
+    axis lines = middle,
+    xlabel=$t$ (após 1900),
+    ylabel=$P$ (milhões),
+    ymin=0
+    %x label style={at={(axis description cs:0.9,0.2)},anchor=north}, 
+    %y label style={at={(axis description cs:-0.05,.5)},rotate=0,anchor=south}
+    ]
+  
+  \addplot [only marks, color=bookblue,mark options={scale=0.5}] table [x=X, y=Y,col sep=comma] {population.csv};
+  \addplot[bookpink,domain=0:120, samples=120]{1436.53*(1.01395)^(x)};
+  \end{axis}
+  %\draw[blueline,domain=0:100] plot (\x/30,{(1.43653*10^3)*1.01395^(\x)/2300});
+  \end{tikzpicture}
+\end{document}

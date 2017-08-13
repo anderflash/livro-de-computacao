@@ -1,0 +1,23 @@
+\documentclass[tikz,fontsize=8pt]{standalone}
+\input{../style}
+\usepackage{scrextend}
+\changefontsizes[8pt]{8pt}
+\usetikzlibrary{decorations.pathreplacing}
+\begin{document}
+  \begin{tikzpicture}
+    \node at (-0.15,-0.2) {0};
+    \draw[->] (-1.5,0) -- (1.5,0) node[below left] {$x$};
+    \draw[->] (0,-0.5) -- (0,2.5) node[below left] {$y$};
+    
+    \draw[blueline,domain=-0.97:1.8] plot (\x/1.5,{(\x)^2/1.5});
+    \draw[blueline] (-0.6667,1.3333) -- (-1.3333,2);
+    \fill[bookblue] (-0.6667,1.3333) circle (0.5mm);
+    \draw[bookblue] (-0.6667,0.6667) circle (0.5mm);
+    \node at (0.6667,-0.25) {$1$};
+    \node at (-0.15,0.6667) {$1$};
+    \node at (-0.6667,-0.25) {$-1$};
+    \draw (0.6667,-0.08) -- (0.6667,0.08);
+    \draw (-0.6667,-0.08) -- (-0.6667,0.08);
+    \draw (-0.08,0.6667) -- (0.08,0.6667);
+  \end{tikzpicture}
+\end{document}

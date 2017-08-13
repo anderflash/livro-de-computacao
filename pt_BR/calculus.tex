@@ -3,7 +3,8 @@
 \section{Introdução}
 
 \subsection{O problema da área}
-Há 2500 anos, os gregos achavam áreas através do método da exaustão, dividindo um polígono em triângulos para achar a área $A$ (Figura~\ref{fig:polygon-area-division}). Mas e a área de uma figura curva?  Figura~\ref{fig:circle-polygon-approximation} mostra que aumentando o número de lados do polígono inscrito, sua área se aproxima da área do círculo. Podemos utilizar esta técnica para encontrar a área de qualquer outra curva (Figura~\ref{fig:curve-approximation}). Este é um problema central para o \emph{cálculo integral}.\vspace{-0.6cm}
+Há 2500 anos, os gregos achavam áreas através do método da exaustão, dividindo um polígono em triângulos para achar a área $A$ (Figura~\ref{fig:polygon-area-division}). Mas e a área de uma figura curva?  Figura~\ref{fig:circle-polygon-approximation} mostra que aumentando o número de lados do polígono inscrito, sua área se aproxima da área do círculo. Podemos utilizar esta técnica para encontrar a área de qualquer outra curva (Figura~\ref{fig:curve-approximation}). Este é um problema central para o \emph{cálculo integral}.
+\vspace{-0.6cm}
 \begin{figure}[!ht]
   \subfloat[\label{fig:polygon-area-division}]{%
     \includegraphics{calculus/polygon-area-division}  
@@ -19,11 +20,11 @@ Há 2500 anos, os gregos achavam áreas através do método da exaustão, dividi
 \end{figure}
 
 \subsection{O problema da tangente}
-Considere o problema de encontrar uma equação da linha tangente $t$ a uma curva com equação $y=f(x)$ em um ponto $P$ (Figura~\ref{fig:tangent-line}). Sabendo que $P$ incide sobre a tangente, basta encontrar a inclinação $m$. O problema é que precisamos de dois pontos para encontrar $m$ e só temos o ponto $P$ em $t$. Podemos encontrar uma aproximação obtendo um ponto próximo $Q$ da curva e calcular a inclinação $m_{PQ}$ da secante $PQ$. Da Figura~\ref{fig:secant-line}:
+Considere o problema de encontrar uma equação da linha tangente $t$ a uma curva com equação $y=f(x)$ em um ponto $P$ (Figura~\ref{fig:tangent-line}). Sabendo que $P$ incide sobre a tangente, basta encontrar o declive $m$. O problema é que precisamos de dois pontos para encontrar $m$ e só temos o ponto $P$ em $t$. Podemos encontrar uma aproximação obtendo um ponto próximo $Q$ da curva e calcular o declive $m_{PQ}$ da secante $PQ$. Da Figura~\ref{fig:secant-line}:
 \begin{equation}\label{eq:secant-slope}
 m_{PQ} =\frac{f(x)-f(a)}{x-a}
 \end{equation}
-Imagine $Q$ se movendo sobre a curva em direção a $P$ (Figura~\ref{fig:secant-line-tangent}). A secante se rotaciona e se aproxima da tangente como sua posição limite. Isto significa que o valor da inclinação $m_{PQ}$ se torna próximo da inclinação $m$ da tangente, ou seja $m=\lim_{Q\rightarrow P}m_{PQ}$. Como $x$ se aproxima de $a$, pela Eq.~\ref{eq:secant-slope}:\begin{equation}\label{eq:tangent-slope}
+Imagine $Q$ se movendo sobre a curva em direção a $P$ (Figura~\ref{fig:secant-line-tangent}). A secante se rotaciona e se aproxima da tangente como sua posição limite. Isto significa que o valor do declive $m_{PQ}$ se torna próximo do declive $m$ da tangente, ou seja $m=\lim_{Q\rightarrow P}m_{PQ}$. Como $x$ se aproxima de $a$, pela Eq.~\ref{eq:secant-slope}:\begin{equation}\label{eq:tangent-slope}
 m=\lim_{x\rightarrow a}\frac{f(x)-f(a)}{x-a}
 \end{equation}
 \vspace{-0.6cm}\begin{figure}[!ht]
@@ -68,7 +69,7 @@ Temos a sensação que a velocidade instantânea em $t=2$ não é tão diferente
 \end{table}
 
 \noindent Reduzindo o intervalo, a velocidade se aproxima de 10. Assim, esperamos que a velocidade instantânea em $t=2$ seja próximo de 10 m/s. Figura~\ref{fig:circle-polygon-approximation} mostra o deslocamento do carro em função do tempo. A velocidade média no intervalo [2,$t$] é $$\text{velocidade média} = \frac{\text{distância}}{\text{tempo}}=\frac{f(t)-f(2)}{t-2}$$
-que é igual à secante da Figura~\ref{fig:circle-polygon-approximation}. A velocidade instantânea $v$ quando $t=2$ é o valor limite desta velocidade média quanto $t$ se aproxima de 2, $$v=\lim_{t\rightarrow 2}\frac{f(t)-f(2)}{t-2}$$ e da Eq.~\ref{eq:tangent-slope} vemos que $v$ é a inclinação da tangente da curva em $P$.
+que é igual à secante da Figura~\ref{fig:circle-polygon-approximation}. A velocidade instantânea $v$ quando $t=2$ é o valor limite desta velocidade média quanto $t$ se aproxima de 2, $$v=\lim_{t\rightarrow 2}\frac{f(t)-f(2)}{t-2}$$ e da Eq.~\ref{eq:tangent-slope} vemos que $v$ é o declive da tangente da curva em $P$.
 \begin{figure}[!ht]
 	\centering
   \includegraphics{calculus/velocity_curve}
@@ -80,6 +81,7 @@ Podemos aplicar as mesmas técnicas de tangentes em cálculo diferencial não s�
 \subsection{O limite de uma sequência}
 No 5º século A.C. o filósofo grego Zenão de Eléia propôs 4 problemas, conhecidos como \emph{paradoxos de Zenão}, desafiando ideias de tempo e espaço na época. O 2º paradoxo diz respeito a uma corrida entre o herói grego Aquiles e uma tartaruga com vantagem inicial. Zenão argumentou que Aquiles nunca passaria a tartaruga: suponha que Aquiles inicie na posição $a_1$ e a tartaruga em $t_1$ (Figura~\ref{fig:circle-polygon-approximation}). Quando Aquiles chega em $a_2 = t_1$, a tartaruga está em $t_2$ e quando chega em $a_3=t_2$, a tartaruga está em $t_3$. Este processo continua indefinidamente, parecendo que a tartaruga sempre estará na frente, mesmo desafiando o senso comum:
 \begin{figure}[!ht]
+  \vspace{-.4cm}
   \centering
   \begin{minipage}[b]{0.48\columnwidth}
   	\centering
@@ -95,19 +97,21 @@ No 5º século A.C. o filósofo grego Zenão de Eléia propôs 4 problemas, conh
 			{\includegraphics[width=\columnwidth]{calculus/sequence_chart}}
 	\end{minipage}}
   \usebox{\measurebox}\qquad
-  \caption{(a) 2º paradoxo de Zenão, a corrida entre Aquiles e a tartaruga nunca alcançada, (b) sequência em uma linha numérica e (c) em um gráfico.-}
+  \caption{(a) 2º paradoxo de Zenão, a corrida entre Aquiles e a tartaruga nunca alcançada, (b) sequência em uma linha numérica e (c) em um gráfico.-}\vspace{-0.2cm}
 \end{figure}
 
 \noindent Uma maneira de explicar este paradoxo é a ideia de \emph{sequência}. As posições sucessivas de Aquiles ($a_1$,$a_2$,$a_3$,$\dots$) ou da tartaruga ($t_1$,$t_2$,$t_3$,$\dots$) formam uma sequência. Em geral, uma sequência $\{a_n\}$ é um conjunto de números em ordem. Por exemplo, $\left\{1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5},\dots\right\}$ pode ser descrita pela expressão $a_n=\frac{1}{n}$. Podemos visualizar esta sequência plotando seus termos em uma linha numérica (Figura~\ref{fig:sequence_numerical_line}) ou num gráfico (Figura~\ref{fig:sequence_chart}). Observe que os termos se tornam mais próximos de 0 quando $n$ aumenta. Dizemos que o limite da sequência é 0, ou seja $$\lim_{n\rightarrow\infty}\frac{1}{n}=0$$
 Em geral, a notação $\lim_{n\rightarrow\infty}a_n=L$ é usada se os termos $a_n$ se aproximam do número $L$ quando $n$ aumenta.
 O conceito de limite de sequência ocorre toda vez que usamos a representação decimal de um número real. Por exemplo:
 \begin{table}[!ht]
+  \vspace{-0.3cm}
   \centering
   \setlength\tabcolsep{0.15cm}
   \begin{tabular}{|c|c|c|c|c|c|c|}\hline
     $a_1$&$a_2$&$a_3$&$a_4$&$a_5$&$a_6$&$a_7$\\\hline
     3,1&3,14&3,141&3,1415&3,14159&3,141592&3,1415926\\\hline
   \end{tabular}
+  \vspace{-0.3cm}
 \end{table}
 
 \noindent Então os termos desta sequência são aproximações racionais de $\pi$, ou seja, $\lim_{n\rightarrow \infty}a_n=\pi$. Voltando ao paradoxo de Zenão. As posições de Aquiles e da tartaruga formam sequências $\{a_n\}$ e $\{t_n\}$, onde $a_n<t_n$, para todo $n$. Pode-se mostrar que ambas as sequências têm o mesmo limite: $\lim_{n\rightarrow\infty}a_n=p=\lim_{n\rightarrow\infty}t_n$. É neste ponto $p$ onde Aquiles supera a tartaruga.
@@ -115,10 +119,13 @@ O conceito de limite de sequência ocorre toda vez que usamos a representação 
 \subsection{Soma de uma série}
 Outro paradoxo de Zenão, dito por Aristóteles, é o seguinte: "Um homem andando no meio da sala não conseguirá alcançar a parede". Para isso, ele passaria pela metade da distância, sobrando a outra metade. Isso aconteceria indefinidamente (Figura~\ref{fig:achilles_tortoise}).
 \begin{figure}[!ht]
+  \vspace{-0.3cm}
 	\centering
 	\includegraphics{calculus/wall}
-	\caption{Outro paradoxo de Zenão: o homem nunca alcança a parede.}
+	\caption{Outro paradoxo de Zenão: nunca alcançar a parede.}
+  \vspace{-0.3cm}
 \end{figure}
+
 Sabendo que o homem vai alcançar a parede, podemos expressar a distância total: $1=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\dots+\frac{1}{2^n}+\dots$. Zenão argumentava que não fazia sentido adicionar infinitamente muitos números, porém há outros casos mais claros de somas infinitas. Por exemplo, em notação decimal, o número $0,\overline{3} = 0,3333\dots$ é $\frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\dots=\frac{1}{3}$. De modo geral, se $d_n$ denota o $n$-ésimo dígito na representação decimal de um número, então $$0,d_1d_2d_3\dots = \frac{d_1}{10}+\frac{d_2}{10^2}+\frac{d_3}{10^3}+\dots+\frac{d_n}{10^n}+\dots$$
 Voltando ao paradoxo, definindo os termos da série como:$$\begin{aligned}
 s_1 &= \frac{1}{2}= 0,5\\
@@ -132,7 +139,7 @@ s_{16} &= \frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2^{16}}\approx 0,99998474
 \end{aligned}$$
 A soma parcial se torna próxima de 1. Aumentando $n$, $s_n$ se torna mais próximo de 1. Torna-se razoável definir a soma da série infinita como 1: $$\frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2^n} = 1$$ A razão por ser 1 é: $\lim_{n\rightarrow\infty}s_n=1$. Usaremos as ideias de Newton para combinar séries infinitas com cálculo diferencial e integral. 
 \subsection{Sumário}
-Vemos que o conceito de limites aparece ao tentar achar a área de uma região, a inclinação de uma tangente a uma curva, a velocidade do carro ou a soma de uma série infinita. O tema em comum é o cálculo de um número que é limite de outro calculado mais facilmente. Este conceito de limite diferencia o cálculo das outras áreas da matemática. Na verdade, podemos definir cálculo como a área da matemática que lida com limites. Após Sir Isaac Newton ter inventado sua versão do cálculo, ele o usou para explicar o movimento dos planetas em torno do sol. Hoje o cálculo é usado para calcular as órbitas dos satélites e espaçonaves, predizer tamanhos de populações, estimar taxa de variação do preço do petróleo, prever mudanças climáticas, medir batimento cardíaco, calcular seguros, e muitas outras áreas. As seguintes perguntas nos dizem o poder desta disciplina:
+Vemos que o conceito de limites aparece ao tentar achar a área de uma região, o declive de uma tangente a uma curva, a velocidade do carro ou a soma de uma série infinita. O tema em comum é o cálculo de um número que é limite de outro calculado mais facilmente. Este conceito de limite diferencia o cálculo das outras áreas da matemática. Na verdade, podemos definir cálculo como a área da matemática que lida com limites. Após Sir Isaac Newton ter inventado sua versão do cálculo, ele o usou para explicar o movimento dos planetas em torno do sol. Hoje o cálculo é usado para calcular as órbitas dos satélites e espaçonaves, predizer tamanhos de populações, estimar taxa de variação do preço do petróleo, prever mudanças climáticas, medir batimento cardíaco, calcular seguros, e muitas outras áreas. As seguintes perguntas nos dizem o poder desta disciplina:
 \begin{enumerate}
   \item Como podemos explicar que o ângulo de elevação de um observador até o topo do arco-íris é $42\degree$?
   \item Como podemos explicar o formato das latas nas prateleiras de um supermercado?
@@ -141,11 +148,14 @@ Vemos que o conceito de limites aparece ao tentar achar a área de uma região, 
   \item O quão longe do aeroporto o piloto deve começar o pouso?
   \item Como unir curvas para formar letras numa impressora a laser?
   \item Como estimar o número de trabalhadores necessários para construir a Grande Pirâmide de Khufu no Egito Antigo?
+  \item O que leva mais tempo: atingir o máximo ao lançar a bola ou ela voltar à altura original?
   \item Como podemos explicar o fato dos planetas e satélites se moverem em órbitas elípticas?
   \item Como distribuir o fluxo de água nas turbinas de uma estação hidroelétrica para maximizar a produção de energia?
+  \item Se um bola de gude, bola de squash, uma barra de metal e um cano de chumbo rolarem numa rampa, qual deles chega primeiro no solo?
 \end{enumerate}
 
 \section{Funções e limites}
+\subsection{Quatro formas de representar uma função}
 Funções aparecem quando quantidades dependem de outras. Considere essas 4 situações:
 \begin{itemize}
   \item A área $A$ de um círculo depende do raio $r$. A regra que conecta $r$ e $A$ é dada por: $A=\pi r^2$. Associa-se cada valor positivo de $r$ a um valor de $A$. Assim, $A$ é uma \emph{função} de $r$.
@@ -160,19 +170,19 @@ Funções aparecem quando quantidades dependem de outras. Considere essas 4 situ
     \vspace{-0.25cm}
   \end{table}
   \item O custo $C$ de enviar um envelope depende do peso $p$. Embora não seja simples conectar $p$ e $C$, os correios definem uma regra para determinar $C$ quando $p$ é conhecido.
-  \item A aceleração vertical $a$ do terreno medido por um sismógrafo durante um terremoto é uma função do tempo $t$. Figura~\ref{fig:earthquake} mostra um gráfico da atividade sísmica durante o terremoto de Northidge que abalou Los Angeles em 1994. Para um dado valor de $t$, o gráfico mostra o valor de $a$.\vspace{-0.2cm}\begin{figure}[!ht]
+  \item O valor $a$ de um acelerômetro de um smartphone é uma função do tempo $t$. Figura~\ref{fig:earthquake} mostra um gráfico da função. Para um dado valor de $t$, o gráfico mostra o valor de $a$.\vspace{-0.2cm}\begin{figure}[!ht]
     \centering
     \includegraphics{calculus/northridge-earthquake}
-    \caption{Aceleração vertical do terreno durante o terremoto de Northridge.}
+    \caption{Aceleração do movimento de um smartphone.}
     \label{fig:earthquake}
   \end{figure}
 \end{itemize}
-Em todos os casos, dizemos que o segundo valor ($A$, $P$, $C$ ou $a$) é uma função do primeiro ($r$,$t$,$p$ ou $t$). Uma \textbf{função} $f$ é uma regra que atribui a cada elemento $x$ em um conjunto $D$ exatamente um elemento, chamado $f(x)$, em um conjunto $E$. De forma compacta, $f:D\rightarrow E$. Geralmente $D=\mathds{R}$ e $E=\mathds{R}$ (números reais). $D$ é o \textbf{domínio} da função e $E$ é o \textbf{contradomínio}. $f(x)$ é o \textbf{valor de $f$ em $x$} e se lê "$f$ de $x$". O símbolo que representa um número no domínio é a \textbf{variável independente}. O símbolo que representa um número na imagem é a \textbf{variável independente}.
+Em todos os casos, dizemos que o segundo valor ($A$, $P$, $C$ ou $a$) é uma função do primeiro ($r$,$t$,$p$ ou $t$). Uma \textbf{função} $f$ é uma regra que atribui a cada elemento $x$ em um conjunto $D$ exatamente um elemento, chamado $f(x)$, em um conjunto $E$. De forma compacta, $f:D\rightarrow E$. Geralmente $D=\mathds{R}$ e $E=\mathds{R}$ (números reais). $D$ é o \textbf{domínio} da função e $E$ é o \textbf{contradomínio}. $f(x)$ é o \textbf{valor de $f$ em $x$} e se lê "$f$ de $x$". O conjunto de todos os elementos $y$ do contradomínio os quais existe $x$ no domínio tal que $f(x)=y$ denomina-se \textbf{imagem}. O símbolo que representa um número no domínio é a \textbf{variável independente}. O símbolo que representa um número na imagem é a \textbf{variável independente}.
 
 Uma função também pode ser interpretada como uma \textbf{máquina} (Figura~\ref{fig:machine-diagram}), aceitando um elemento $x$ do domínio da função $f$ na entrada e devolvendo a imagem $f(x)$ na saída. Um exemplo são as funções da calculadora.
 \begin{figure}[!ht]
   \centering
-  \vspace{0.0cm}
+  \vspace{-0.3cm}
   \begin{minipage}[b]{0.3\columnwidth}
     \centering
     \subfloat[\label{fig:machine-diagram}]{\includegraphics[width=\columnwidth]{calculus/machine-diagram}}%
@@ -202,7 +212,7 @@ Outra interpretação de $f$ é como um \textbf{diagrama de setas} (Figura~\ref{
 \end{enumerate}
 
 \example{2} Desenhe o gráfico e ache o domínio e imagem de:
-\vspace{-0.7cm}\begin{multicols}{2}
+\vspace{-0.4cm}\begin{multicols}{2}
   \begin{enumerate}[label=(\alph*)]
     \item $f(x)=2x-1$
     \item $g(x)=x^2$
@@ -210,20 +220,18 @@ Outra interpretação de $f$ é como um \textbf{diagrama de setas} (Figura~\ref{
 \end{multicols}\vspace{-0.3cm}
 \solution
 \begin{enumerate}[label=(\alph*)]
-  \item A equação do gráfico é $y=2x-1$, uma linha de inclinação 2 e intercepto -1. Figura~\ref{fig:ex2-line} mostra o gráfico de $f$. A expressão $2x-1$ é definida para todos os números reais, então o domínio de $f$ é $\mathds{R}$. Veja que a imagem também é $\mathds{R}$.
+  \item A equação do gráfico é $y=2x-1$, uma linha de declive 2 e intercepto -1. Figura~\ref{fig:ex2-line} mostra o gráfico de $f$. A expressão $2x-1$ é definida para todos os números reais, então o domínio de $f$ é $\mathds{R}$. Veja que a imagem também é $\mathds{R}$.
   \item Como $g(2)= 2^2 = 4$ e $g(-1) = (-1)^2 = 1$, podemos plotar os pontos $(2,4)$ e $(-1,1)$, e uni-los com outros pontos no gráfico (Figura~\ref{fig:ex2-parabola}). A equação do gráfico é $y=x^2$, que representa uma parábola. O domínio de $g$ é $\mathds{R}$. A imagem de $g$ consiste em todos os valores de $g(x)$, ou seja, todos os números na forma $x^2$. Mas $x^2\geq 0, \forall x$. Assim, a imagem de $g$ é $\{y:y\geq 0\} = [0,\infty)$.\vspace{-0.3cm}
 \end{enumerate}
 \begin{figure}[!ht]
   \centering
-  \subfloat[\label{fig:ex2-line}]{\includegraphics{calculus/ex2-line}}%
-  \subfloat[\label{fig:ex2-parabola}]{\includegraphics{calculus/ex2-parabola}}%
-  \caption{Gráficos do EXEMPLO 2}
+  \subfloat[Linha\label{fig:ex2-line}]{\includegraphics{calculus/ex2-line}}%
+  \subfloat[Parábola\label{fig:ex2-parabola}]{\includegraphics{calculus/ex2-parabola}}%
+  \caption{Gráficos do Exemplo 2}
 \end{figure}\vspace{-0.4cm}
-\example{3} Se $f(x)=2x^2-5x+1$ e $h\neq 0$, avalie $\displaystyle\frac{f(a+h)-f(a)}{h}$ o qual é denominada \textbf{quociente diferencial}, a taxa de variação de f(x) entre $x=a$ e $x=a+h$
+\example{3} Se $f(x)=2x^2-5x+1$ e $h\neq 0$, avalie $\displaystyle\frac{f(a+h)-f(a)}{h}$, o qual é denominada \textbf{quociente diferencial}, a taxa de variação de f(x) entre $x=a$ e $x=a+h$
 
-\solution
-
-\noindent Obtemos $f(a+h)$ trocando $x$ por $a+h$ na equação de $f(x)$:
+\solution Obtemos $f(a+h)$ trocando $x$ por $a+h$ na equação de $f(x)$:
 $$
 \begin{aligned}
 f(a+h) &=2(a+h)^2-5(a+h)+1\\
@@ -238,61 +246,365 @@ Então substituímos na expressão dada e o simplificamos: $$
 &=\frac{4ah+2h^2-5h}{h}=4a+2h-5
 \end{aligned}
 $$
-\subsection{Representação de funções}
+\subsubsection{Representação de funções}
 Há 4 formas de representar uma função: verbalmente (por uma descrição em palavras), numericamente (por uma tabela de valores), visualmente (por um gráfico) e algebricamente (por uma fórmula explícita). É interessante saber como mudar representações de uma dada função (No Exemplo 2 iniciamos com fórmulas algébricas e obtivemos os gráficos).
 
-A representação mais útil da área de um círculo como função do raio é provavelmente a fórmula algébrica $A(r)=\pi r^2$, embora seja possível compilar uma tabela de valores ou desenhar um gráfico (metade uma parábola). O domínio é $\{r:r>0\}=(0,\infty)$ e a imagem também é $(0,\infty)$.
+A representação mais usada da área do círculo como função do raio é provavelmente a fórmula algébrica $A(r)=\pi r^2$, embora seja possível compilar uma tabela de valores ou desenhar um gráfico (metade uma parábola). O domínio é $\{r:r>0\}=(0,\infty)$ e a imagem também é $(0,\infty)$.
 
-Um exemplo de descrição de uma função verbalmente seria: $P(t)$ é a população humana mundial no tempo $t$. Seja $t=0$ correspondendo ao ano 1900. Podemos gerar uma tabela de valores e logo em seguida um gráfico de dispersão (Figura~\ref{fig:population-scatter}), que nos ajuda a entender todos os dados de uma vez. Falta só a fórmula que descreva de forma exata a população, o que pode ser impossível. Mas podemos encontrar uma fórmula que se aproxima de $P(t)$: $P(t) \approx f(t) = (1,43653\times 10^9)\cdot(1,01395)^t$. Figura~\ref{fig:population-scatter-fit} mostra que f(t) é um bom "ajuste". A função $f$ é um \emph{modelo matemático} para o crescimento populacional. Em outras palavras, é uma função com uma fórmula explícita que aproxima o comportamento de uma dada função. Contudo, veremos que as ideias do cálculo podem ser aplicadas a uma tabela de valores; uma fórmula explícita não é necessária.
+Um exemplo de descrição verbal: $P(t)$ é a população humana mundial no tempo $t$. Seja $t=0$ correspondendo ao ano 1900. Podemos gerar uma tabela de valores e em seguida um gráfico de dispersão (Figura~\ref{fig:population-scatter}), que nos ajuda a entender todos os dados de uma vez. Uma fórmula que descreva de forma exata a população pode ser impossível. Mas podemos encontrar uma fórmula que se aproxima de $P(t)$: $P(t) \approx f(t) = (1,43653\times 10^9)\cdot(1,01395)^t$.
+\vspace{-0.5cm}\begin{table}[!ht]
+  \setlength\tabcolsep{0.04cm}
+  \begin{tabular}{|cccccccccccc|}\hline
+    \multicolumn{12}{|c|}{$t$ (anos desde 1900)}\\
+    0&10&20&30&40&50&60&70&80&90&100&110\\
+    1650&1750&1860&2070&2300&2560&3040&3710&4450&5280&6080&6870\\
+    \multicolumn{12}{|c|}{População (milhões)}\\\hline
+  \end{tabular}\vspace{-1cm}
+\end{table}%
 \begin{figure}[!ht]
-	\centering
-	\subfloat[\label{fig:population-scatter}]{\includegraphics{calculus/ex2-line}}%
-	\subfloat[\label{fig:population-scatter-fit}]{\includegraphics{calculus/ex2-parabola}}%
-	\caption{Gráficos do EXEMPLO 2}
+  \centering
+  \subfloat[\label{fig:population-scatter}]{\includegraphics{calculus/population-scatter}}%
+  \subfloat[\label{fig:population-scatter-fit}]{\includegraphics{calculus/population-scatter-fit}}%
+  \caption{Gráfico (a) de dispersão da população mundial e (b) da curva aproximada}\vspace{-0.3cm}
 \end{figure}
+
+Figura~\ref{fig:population-scatter-fit} mostra que $f(t)$ é um bom "ajuste". A função $f$ é um \emph{modelo matemático} para o crescimento populacional. Em outras palavras, é uma função com uma fórmula explícita que aproxima o comportamento de uma dada função. Contudo, veremos que as ideias do cálculo podem ser aplicadas a uma tabela de valores; uma fórmula explícita não é necessária.
+
 
 A função $P$ é típica de funções que aparecem no mundo real. Começamos com uma descrição verbal (uma hipótese), depois realizamos observações e medições utilizando aparatos e métodos científicos, criando uma tabela de valores. Em seguida podemos derivar uma função aproximada ou aplicar operações de cálculo, mesmo que não tenhamos o total conhecimento do comportamento da função.
 
 Outro exemplo descrito em palavras: seja $C(p)$ o custo de enviar um envelope de peso $p$. A regra dos Correios para Carta Comercial (preço básico) é: 
-\begin{table}
-	\begin{tabular}{lccccc}
-		Peso & $p \leq 20$ & $20 > p \leq 50$ & $50 > p \leq 100$ & $100 > p \leq 150$ & $20 > p \leq 50$\\
-		Preço & $p \leq 20$ & $20 > p \leq 50$ & $50 > p \leq 100$ & $100 > p \leq 150$ & $20 > p \leq 50$\\
+\vspace{-0.3cm}\begin{table}[!ht]
+  \setlength\tabcolsep{0.04cm}
+  \centering
+	\begin{tabular}{|c|c|c|c|c|}\hline
+    \multicolumn{5}{|c|}{Peso $p$ (gramas)}\\\hline
+		$p \leq 20$ & $20 > p \leq 50$ & $50 > p \leq 100$ & $100 > p \leq 150$ & $150 > p \leq 200$\\\hline
+		1,80&2,55&3,50&4,25&5,05\\\hline
+    \multicolumn{5}{|c|}{Custo $C(p)$ (R\$)}\\\hline
 	\end{tabular}
+  \vspace{-0.5cm}
 \end{table}
-Até 20	1,80	6,10	10,40	12,00	16,30
-Mais de 20 até   50	2,55	6,85	11,15	12,75	17,05
-Mais de 50 até 100	3,50	7,80	12,10	13,70	18,00
-Mais de 100 até 150	4,25	8,55	12,85	14,45	18,75
-Mais de 150 até 200	5,05	9,35	13,65	15,25	19,55
-Mais de 200 até 250	5,85	10,15	14,45	16,05	20,35
-Mais de 250 até 300	6,65	10,95	15,25	16,85	21,15
-Mais de 300 até 350	7,45	11,75	16,05	17,65	21,95
-Mais de 350 até 400	8,20	12,50	16,80	18,40	22,70
-Mais de 400 até 450	9,00	13,30	17,60	19,20	23,50
-Mais de 450 até 500	9,80	14,10	18,40	20,00	24,30
 
-\subsection{Teste da linha vertical}
+\example{4} Quando você abre uma torneira de água quente, a temperatura $T$ da água depende de quanto tempo ela esteve correndo. Desenhe um esboço do gráfico de $T$ como uma função do tempo $t$ corrido desde que a torneira foi aberta.
 
-A curva no plano $xy$ é o gráfico de uma função se e somente se nenhuma linha vertical intersecta a curva mais de uma vez. O caso contrário significa que a função mapeia um elemento do domínio para mais de um elemento da imagem, o que não pode acontecer. Por exemplo, a parábola $x = y^2-2$ da Figura~\ref{fig:achilles_tortoise} não é o gráfico de uma função pois há linhas verticais intersectando a parábola duas vezes. Na verdade, tal parábola é um gráfico de duas funções. Veja que $y^2=x+2$ e $y=\pm\sqrt{x+2}$, então a metade superior representa $f(x) = \sqrt{x+2}$; a inferior, $g(x)=-\sqrt{x+2}$. Revertendo os papeis de x e y (x sendo uma função h(y)), a parábola original se torna o gráfico da função h(y).
+\solution A temperatura inicial da água é perto da temperatura da sala por permanecer no cano. Quando a água do tanque de água-quente começa a fluir, $T$ aumenta rapidamente. Na próxima fase, $T$ se torna constante. Quando o tanque é drenado, $T$ é reduzido à temperatura do abastecimento de água (Figura~\ref{fig:hot-water-faucet}).
+
 \begin{figure}[!ht]
-	\centering
-	\subfloat[\label{fig:parabola-complete}]{\includegraphics{calculus/ex2-line}}%
-	\subfloat[\label{fig:parabola-half}]{\includegraphics{calculus/ex2-parabola}}%
-	\subfloat[\label{fig:parabola-other-halp}]{\includegraphics{calculus/ex2-parabola}}%
-	\caption{Gráficos do EXEMPLO 2}
+  \centering
+  \subfloat[\label{fig:hot-water-faucet}]{\includegraphics{calculus/hot-water-faucet}}%
+  \subfloat[\label{fig:storage-container}]{\includegraphics{calculus/storage-container}}%
+  \caption{(a) Torneira de água quente e (b) Container de armazenamento.}
+  \vspace{-0.5cm}
 \end{figure}
 
-\example{7} A função $f$ é definida como $$f(x) = \begin{cases}
+\example{5} Um container de armazenamento retangular com o topo aberto tem um volume de 10$\si\meter^3$. O comprimento de sua base é o dobro da sua largura. O material para a base custa R\$10 por $\si{\meter}^2$; o material para os lados custa R\$6 por $\si{\meter}^2$. Expresse o custo dos materiais como uma função da largura da base.
+
+\solution Desenhemos um diagrama como na Figura~\ref{fig:storage-container} e seja $l$ e $2l$ respectivamente a largura e comprimento da base, e $a$ sua altura. A área da base é $(2l)l=2l^2$, então o custo, em reais, do material para a base é $20l^2$. Dois lados tem área $la$ e os outros dois tem área $2la$. Então os 4 lados custam $6(2la + 4la)=36la$. O custo total é $C=20l^2+36la$. Como a caixa tem $10\si\meter^3$ de volume, então $l(2l)a = 10$. Assim, $\displaystyle a=\frac{10}{2l^2}=\frac{5}{l^2}$. Substituindo em $C$: $$C = 20l^2+36l\left(\frac{5}{l^2}\right) = 20l^2+\frac{180}{l}$$.
+Assim a equação seguinte expressa $C$ em função apenas de $l$:
+$$C(l)=20l^2+\frac{180}{l}\hspace{0.5cm} l > 0$$
+
+\example{6} Encontre o domínio de cada função
+\vspace{-0.3cm}\begin{multicols}{2}
+  \begin{enumerate}[label=(\alph*)]
+    \item $\displaystyle f(x) = \sqrt{x+2}$
+    \item $\displaystyle g(x)=\frac{1}{x^2-x}$
+  \end{enumerate}
+\end{multicols}
+\vspace{-0.3cm}\solution 
+\begin{enumerate}[label=(\alph*)]
+  \item Como a raiz quadrada de um número negativo não é definido (como um número real), o domínio de $f$ consiste em todos os valores de $x$ tais que $x+2 \geq 0$, ou seja, $x \geq -2$. Então o domínio é o intervalo $[-2,\infty)$
+  \item Como $\displaystyle g(x)=\frac{1}{x^2-x}=\frac{1}{x(x-1)}$, e divisão por 0 não é permitida, $g(x)$ não é definida quando $x=0$ ou $x=1$. Então o domínio de $g$ é $\{x:x\neq 0, x\neq 1\}=(-\infty,0)\cup(0,1)\cup(1,\infty)$.
+\end{enumerate}
+
+O gráfico de uma função no plano-$xy$ é uma curva. Mas todas as curvas no plano-$xy$ são gráficos de funções?
+\vspace{-0.3cm}
+\subsubsection{Teste da linha vertical}
+
+A curva no plano $xy$ é o gráfico de uma função se e somente se nenhuma linha vertical intersecta a curva mais de uma vez. Caso contrário, a função mapeia um elemento do domínio para mais de um elemento da imagem, o que não pode acontecer. Por exemplo, a parábola $x = y^2-2$ da Figura~\ref{fig:vertical-test-parabola} não é o gráfico de uma função pois há linhas verticais intersectando a parábola duas vezes. Na verdade, tal parábola é um gráfico de duas funções. Veja que $y^2=x+2$ e $y=\pm\sqrt{x+2}$, então a metade superior representa $f(x) = \sqrt{x+2}$ (Figura~\ref{fig:vertical-test-parabola-half}); a inferior, $g(x)=-\sqrt{x+2}$ (Figura~\ref{fig:vertical-test-parabola-other-half}). Revertendo os papeis de x e y (x sendo uma função h(y)), a parábola original se torna o gráfico da função h(y).
+\vspace{-0.6cm}\begin{figure}[!ht]
+	\centering
+	\subfloat[$x=y^2-2$\label{fig:vertical-test-parabola}]{\includegraphics{calculus/vertical-test-parabola}}%
+	\subfloat[$y=\sqrt{x+2}$\label{fig:vertical-test-parabola-half}]{\includegraphics{calculus/vertical-test-parabola-half}}%
+	\subfloat[$y=-\sqrt{x+2}$\label{fig:vertical-test-parabola-other-half}]{\includegraphics{calculus/vertical-test-parabola-other-half}}%
+	\caption{(a) Não é um gráfico de uma função, mas (b) e (c) são.}
+  \vspace{-0.5cm}
+\end{figure}
+
+\subsubsection{Funções definidas em trechos}
+
+Uma função não pode ter duas saídas para a mesma entrada (pelo teste da linha vertical), mas ela pode ter mais de uma fórmula aplicadas a diferentes partes do domínio.
+
+\example{7} Seja a função $\displaystyle f(x) = \begin{cases}
 1-x, & \text{ se } x \leq -1\\
 x^2, & \text{ se } x > -1\\
-\end{cases}$$
+\end{cases}$.
 Avalie $f(-2)$, $f(-1)$ e $f(0)$ e desenhe o gráfico.
+
 \solution
-Mesmo tendo duas regras diferentes, estamos tratando de uma só função, pois elas se referem a faixas diferentes no domínio (não se sobrepõem). A função devolve o valor de $y$ usando a primeira regra apenas se $x \leq 1$, aplicando a segunda regra caso contrário ($x > 1$).
+Este é um exemplo de função com duas regras aplicadas em faixas diferentes no domínio. Se $x \leq 1$, a função aplica a primeira regra, aplicando a segunda caso contrário ($x > 1$). Como $-2 \leq -1$, então $f(-2) = 1-(-2) = 3$. Como $-1\leq -1$, então $f(-1)=1-(-1)=2$. Como $0 > -1$, então $f(0) = 0^2 = 0$. Para desenhar o gráfico completo, desenhe separadamente cada regra, como na Figura~\ref{fig:piecewise-parabola}. O \textbf{ponto fechado} (preenchido) indica o que a coordenada $(-1,2)$ está incluída no gráfico, ou seja, que $f(-1) = 2$. O \textbf{ponto aberto} (vazio) indica que $(-1,-1)$ não está incluída no gráfico. Só precisamos desenhar estes pontos se houver uma descontinuidade no gráfico.
+\vspace{-0.7cm}\begin{figure}[!ht]
+  \centering
+  \subfloat[\label{fig:piecewise-parabola}]{\includegraphics[width=0.276\columnwidth]{calculus/piecewise-parabola}}
+  \subfloat[\label{fig:absolute-value}]{\includegraphics[width=0.29\columnwidth]{calculus/absolute-value}}%
+  \subfloat[\label{fig:ex9}]{\includegraphics[width=0.42\columnwidth]{calculus/ex9}}%
+  \caption{Gráfico: (a) Exemplo 7, (b) Exemplo 8 e (c) Exemplo 9.}
+  \vspace{-0.5cm}
+\end{figure}
+
+\example{8} Desenhe a função de valor absoluto $f(x) = |x|$.
+
+\solution
+Embora pareça apenas uma fórmula, temos duas. A imagem é $|x|\geq 0, \forall x$. Devemos transformar os números negativos do domínio em positivos. Para os já positivos, não precisamos fazer nada. Por isso: $$\displaystyle |x|=\begin{cases}
+x &\text{ se } x \geq 0\\
+-x & \text{ se } x < 0
+\end{cases}$$
+
+\noindent Podemos desenhar separadamente f(x) = x e f(x) = -x (Figura~\ref{fig:absolute-value}). Não é necessário desenhar os pontos aberto e fechado em $x=0$.
+
+\example{9} Encontre uma fórmula $f$ desenhada na Figura~\ref{fig:ex9}
+
+\solution A linha entre (0,0) e (1,1) tem declive $m = 1$ e y-intercepto $b=0$. Então sua equação é $y=x$. Então a primeira parte da fórmula é $f(x) = x$ se $0\leq x \leq 1$. A linha entre (1,1) e (2,0) tem declive $m=-1$, e como $m=\Delta y/\Delta x=(y-y_0)/(x-x_0)$, onde $(x_0,y_0)$ é um ponto conhecido: $-1 = (y-0)/(x-2) \Rightarrow y=2-x$. Encontramos a segunda regra: $f(x) = 2-x$, se $1<x\leq 2$. Veja que a terceira parte do gráfico coincide com o eixo $x$ para $x>2$, ou seja, $f(x)=0$ se $x>2$. Juntando as regras: $$f(x)=\begin{cases}
+x & \text{ se } 0 \leq x \leq 1\\
+2-x & \text{ se } 1 < x \leq 2\\
+0 & \text{ se } x > 2
+\end{cases}$$
+\vspace{-0.5cm}
+%\example{10} No Exemplo C desta seção consideramos o custo $C(p)$ de enviar um envelope de peso $p$. Usando a tabela dos Correios, temos:
+
+\subsubsection{Simetria}
+Se $f(-x)=f(x)$ para todo número $x$ no seu domínio, então $f$ é uma \textbf{função par}. Por exemplo, a função $f(x)=x^2$ é par pois $f(-x)=(-x)^2 = x^2 = f(x)$. A interpretação geométrica é que o eixo $y$ se comporta como um espelho, refletindo o gráfico da metade do domínio na outra (Figura~\ref{fig:even-function}).
+
+Se $f(-x)=-f(x)$ para todo número $x$ no seu domínio, então $f$ é uma \textbf{função ímpar}. Por exemplo, $f(x) = x^3$ é ímpar pois $f(-x) = (-x)^3 = -x^3 = -f(x)$. O gráfico é simétrico na origem. Teremos o mesmo gráfico se rotacioná-lo a $180\degree$ da origem (Figura~\ref{fig:odd-function}).
+\begin{figure}[!ht]
+  \centering
+  \subfloat[\label{fig:even-function}]{\includegraphics[width=0.276\columnwidth]{calculus/even-function}}
+  \subfloat[\label{fig:odd-function}]{\includegraphics[width=0.29\columnwidth]{calculus/odd-function}}
+  \caption{Gráfico: (a) Exemplo 7, (b) Exemplo 8 e (c) Exemplo 9.}
+  \vspace{-0.5cm}
+\end{figure}
+
+\example{11} Determine se cada uma das seguintes funções é par, ímpar ou nem par nem ímpar. 
+
+\vspace{-0.6cm}
+\begin{multicols}{3}
+\vspace{-1cm}
+  \begin{enumerate}[label=(\alph*)]
+    \item $f(x) = x^5 + x$
+    \item $g(x) = 1-x^4$
+    \item $h(x) = 2x-x^2$
+  \end{enumerate}
+
+\end{multicols}  
+\vspace{1cm}
+
+\solution Figura~\ref{fig:ex10} ilustra as seguintes respostas:
+\begin{enumerate}[label=(\alph*)]
+  \item $f(-x)=(-x)^5 + (-x)= -x^5-x=-(x^5+x)=-f(x)$ (ímpar)
+  \item $g(-x)=1-(-x)^4=1-x^4=g(x)$ (par)
+  \item $h(-x)=2(-x)-(-x)^2=-2x-x^2\neq h(x)$ e $h(-x)\neq h(x)$ (nem par nem ímpar)
+\end{enumerate}\vspace{-0.7cm}
+\begin{figure}[!ht]
+  \centering
+  \subfloat[\label{fig:ex10-a}]{\includegraphics[width=0.276\columnwidth]{calculus/even-function}}
+  \subfloat[\label{fig:ex10-b}]{\includegraphics[width=0.29\columnwidth]{calculus/odd-function}}
+  \subfloat[\label{fig:ex10-c}]{\includegraphics[width=0.29\columnwidth]{calculus/odd-function}}
+  \caption{Gráfico: (a) Exemplo 7, (b) Exemplo 8 e (c) Exemplo 9.}
+  \label{fig:ex10}
+  \vspace{-0.5cm}
+\end{figure}
+
+\subsubsection{Funções crescentes e decrescentes}
+
+O gráfico da Figura~\ref{fig:increasing-decreasing} cresce de $A$ a $B$, decresce de $B$ a $C$, e cresce novamente de $C$ a $D$. Diz-se que a função $f$ é crescente no intervalo [a,b], decrescente em [b,c] e crescente de novo em [c,d]. De maneira geral, a função $f$ é \textbf{crescente} ou \textbf{decrescente} num intervalo $I$ se respectivamente $f(x_1) < f(x_2)$ ou $f(x_1) > f(x_2)$, para todo $x_1 < x_2$ em $I$. Veja na Figura~\ref{fig:increasing-decreasing-parabola} que a função $f(x) = x^2$ é decrescente no intervalo $(\infty, 0]$ e crescente no intervalo $[0,\infty)$.
+\vspace{-0.5cm}\begin{figure}[!ht]
+  \centering
+  \subfloat[\label{fig:increasing-decreasing}]{\includegraphics[width=0.3\columnwidth]{calculus/even-function}}
+  \subfloat[\label{fig:increasing-decreasing-parabola}]{\includegraphics[width=0.29\columnwidth]{calculus/odd-function}}
+  \caption{Gráfico: (a) Exemplo 7, (b) Exemplo 8 e (c) Exemplo 9.}
+  \vspace{-0.5cm}
+\end{figure}
+
+\subsubsection{Exercícios}
+
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=*]
+  \item Se $f(x)=x+\sqrt{2-x}$ e $g(u)=u+\sqrt{2-u}$, é verdade que $f=g$?
+  \item Se $\displaystyle f(x)=\frac{x^2-x}{x-1}$ e $\displaystyle g(x)=x$, é verdade que $f=g$?
+  \item O gráfico da função $f$ é dada na Figura~\ref{fig:2-1-exercicio3}.
+  \begin{enumerate}
+    \item Dê o valor de $f(1)$.
+    \item Estime o valor de $f(-1)$.
+    \item $f(x)=1$ para quais valores de $x$?
+    \item Estime o valor de $x$ tal que $f(x)=0$.
+    \item Expresse o domínio e imagem de $f$.
+    \item Em qual intervalo $f$ é crescente?
+  \end{enumerate}\vspace{-0.3cm}
+  \begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.4\columnwidth}
+        \includegraphics[width=\columnwidth]{calculus/graph}
+        \caption{Exercício 3}
+        \label{fig:2-1-exercicio3}
+    \end{minipage}
+    \begin{minipage}{0.4\columnwidth}
+        \includegraphics[width=\columnwidth]{calculus/graph}
+        \caption{Exercício 4}
+        \label{fig:2-1-exercicio4}
+    \end{minipage}
+  \end{figure}
+  \item Os gráficos de $f$ e $g$ são dados na Figura\ref{fig:2-1-exercicio4}
+  \begin{enumerate}
+    \item Obtenha os valores de $f(-4)$ e $g(3)$.
+    \item $f(x)=g(x)$ para quais valores de $x$?
+    \item Estime a solução da equação $f(x)=-1$.
+    \item $f$ está decrescendo em qual intervalo?
+    \item Obtenha o domínio e imagem de $f$.
+    \item Obtenha o domínio e imagem de $g$.
+  \end{enumerate}
+  \item Nesta seção discutimos exemplos de funções usadas no dia-a-dia: População como função do tempo, custo de postagem como função de peso, temperatura da água como função do tempo. Dê três outros exemplos de funções descritas verbalmente. O que dizer sobre o domínio e imagem de cada uma? Se possível, desenhe um esboço do gráfico de cada uma.
+  
+  \vspace{0.2cm}
+  \NoIndent{\textcolor{bookblue}{\textbf{6-9}} Determine se a curva é um gráfico de uma função de $x$. Se sim, diga o domínio e imagem dela.}
+  \vspace{0.2cm}
+  
+  \begin{multicols}{2}
+  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/graph}}
+  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/graph}}
+  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/graph}}
+  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/graph}}
+  \end{multicols}
+  \item A Figura~\ref{fig:2-1-exercicio10} é um gráfico da temperatura global $T$ durante o século XX. Estime:
+  \begin{enumerate}
+    \item A temperatura média global em 1950
+    \item O ano quando a temperatura média foi $14,2\si\degreeCelsius$
+    \item O ano quando a temperatura foi a menor (e a maior).
+    \item A imagem de $T$
+  \end{enumerate}
+    \begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.49\columnwidth}
+      \includegraphics[width=\columnwidth]{calculus/graph}
+      \caption{Exercício 3}
+      \label{fig:2-1-exercicio10}
+    \end{minipage}
+    \begin{minipage}{0.49\columnwidth}
+      \includegraphics[width=\columnwidth]{calculus/graph}
+      \caption{Exercício 4}
+      \label{fig:2-1-exercicio11}
+    \end{minipage}
+  \end{figure}
+  \item Árvores crescem mais rápido e formam anéis mais largos em anos mais quentes e crescem mais devagar e formam anéis mais curtos em anos mais frios. A Figura~\ref{fig:2-1-exercicio11} mostra larguras de aneis de um pinhal Siberiano de 1500 a 2000.
+  \begin{enumerate}
+    \item Qual a imagem da função de largura do anel?
+    \item O que o gráfico nos diz sobre a temperatura da terra? O gráfico reflete as erupções vulcânicas do século XIX?
+  \end{enumerate}
+  \item Você poe alguns cubos no copo, enche-o de água fria, e o deixa sobre a mesa. Descreva como a temperatura da água muda conforme o tempo passa. Desenhe o esboço do gráfico da temperatura da água em função do tempo decorrido.
+  \item Três corredores competem em uma corrida de $100\si{\meter}$. O gráfico da Figura~\ref{fig:2-1-exercicio12} mostra a distância percorrida por cada corredor em função do tempo. Descreva o que o gráfico diz sobre esta corrida. Quem a venceu? Todos a terminaram?
+  \begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.49\columnwidth}
+      \includegraphics[width=\columnwidth]{calculus/graph}
+      \caption{Exercício 3}
+      \label{fig:2-1-exercicio12}
+    \end{minipage}
+    \begin{minipage}{0.49\columnwidth}
+      \includegraphics[width=\columnwidth]{calculus/graph}
+      \caption{Exercício 4}
+      \label{fig:2-1-exercicio13}
+    \end{minipage}
+  \end{figure}
+  \item O gráfico da Figura~\ref{fig:2-1-exercicio13} mostra o consumo de potência por um dia em Setembro em São Francisco-EUA (P é medido em megawatts; t é medido em horas iniciando à meia noite).
+  \begin{enumerate}
+    \item Qual é o consumo de potência às 6 AM? E às 6 PM?
+    \item Quando o consumo foi o menor? E o maior? Há sentido nestes tempos?
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{Modelos matemáticos: um catálogo de funções essenciais}
+
+Um \textbf{modelo matemático} é uma descrição matemática de um fenômeno do mundo real como o tamanho da população, a demanda de um produto, a velocidade de um objeto em queda, a concentração de um produto em uma reação química, a expectativa de vida de uma pessoa, ou a economia de reduções de emissões. O propósito do modelo é entender o fenômeno e talvez fazer predições sobre o comportamento futuro.
+
+\subsubsection{Modelos Lineares}
+\subsubsection{Polinomiais}
+\subsubsection{Funções de potência}
+\subsubsection{Funções racionais}
+\subsubsection{Funções algébricas}
+\subsubsection{Funções trigonométricas}
+\subsubsection{Funções exponenciais}
+\subsubsection{Funções logarítmicas}
+
+\subsection{Gerando funções a partir de outras}
+\subsubsection{Transformações de funções}
+\subsubsection{Combinações de funções}
+
+\subsection{O limite de uma função}
+
+\subsubsection{Limites unilaterais}
+
+\subsubsection{Calculando limites usando as leis de limite}
+
+\subsection{Definição precisa do limite}
+\subsubsection{Limites infinitos}
+\subsection{Continuidade}
 
 \section{Derivadas}
+\subsection{Derivadas e taxas de variação}
+\subsubsection{Tangentes}
+\subsubsection{Velocidades}
+\subsubsection{Derivadas}
+\subsubsection{Taxas de variação}
+\subsection{Derivadas como funções}
+\subsubsection{Outras notações}
+\subsubsection{Funções não diferenciáveis}
+\subsubsection{Derivadas de ordem mais alta}
+\subsection{Fórmulas de diferenciação}
+\subsubsection{Novas derivadas a partir de outras}
+\subsubsection{Funções potências gerais}
+\subsection{Derivadas de funções trigonométricas}
+\subsection{A regra da cadeia}
+\subsubsection{Prova da regra da cadeia}
+\subsection{Diferenciação implícita}
+\subsection{Taxas de variação nas ciências sociais e naturais}
+\subsubsection{Física}
+\subsubsection{Química}
+\subsubsection{Biologia}
+\subsubsection{Economia}
+\subsubsection{Outras ciências}
+\subsubsection{Uma simples ideia, muitas interpretações}
+\subsection{Taxas relacionadas}
+\subsection{Aproximações lineares e diferenciais}
+\subsubsection{Aplicações em Física}
+\subsubsection{Diferenciais}
+\section{Aplicações da Diferenciação}
+\subsection{Valores máximo e mínimo}
+\subsection{O teorema do valor médio}
+\subsection{Como derivadas afetam a forma de um gráfico}
+\subsubsection{O que $f'$ nos diz sobre $f$}
+\subsubsection{Valores de extremo locais}
+\subsubsection{O que $f''$ nos diz sobre $f$}
+\subsubsection{Limites infinitos no infinito}
+\subsubsection{Definições precisas}
+\subsection{Sumário de desenho de curva}
+\subsection{Problemas de otimização}
+\subsection{Método de Newton}
+\subsection{Antiderivadas}
+
 \section{Integrais}
+\subsection{Áreas e distâncias}
+\subsubsection{O problema da área}
+\subsubsection{O problema da distância}
+\subsection{A integral definida}
+\subsubsection{Avaliando integrais}
+\subsubsection{A Regra do Ponto Médio}
+\subsubsection{Propriedades da integral definida}
+\subsection{Teorema fundamental do cálculo}
+\subsubsection{Diferenciação e Integração como processos inversos}
+\subsection{Integrais indefinidas e o Teorema da Variação Líquida}
+\subsubsection{Integrais indefinidas}
+\subsubsection{Aplicações}
+\subsection{A Regra da Substituição}
+
+
 \section{Funções inversas}
 \section{Técnicas de integração}
 \section{Aplicações de integração}
