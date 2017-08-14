@@ -1,0 +1,23 @@
+\documentclass[tikz,fontsize=8pt]{standalone}
+\input{../style}
+\usepackage{scrextend}
+\changefontsizes[8pt]{8pt}
+\usetikzlibrary{decorations.pathreplacing}
+\begin{document}
+  \begin{tikzpicture}
+  %\node at (-0.15,-0.2) {0};
+  \draw[->] (-1.5,0) -- (1.5,0) node[below left] {$x$};
+  \draw[->] (0,-1.5) -- (0,1.5) node[below left] {$y$};
+  
+  \draw[blueline,domain=-1:1,samples=500] plot [smooth] (\x/1.5,{(\x^5+\x)/1.5});
+  \node at (0.6667,-0.25) {$1$};
+  \node at (-0.6667,-0.25) {$-1$};
+  \node at (-0.25,-0.6667) {$-1$};
+  \node at (-0.25,0.6667) {$1$};
+  \node at (0.8,0.8) {$f$};
+  \draw (0.6667,-0.1) -- (0.6667,0.1);
+  \draw (-0.6667,-0.1) -- (-0.6667,0.1);
+  \draw (-0.1,0.6667) -- (0.1,0.6667);
+  \draw (-0.1,-0.6667) -- (0.1,-0.6667);
+  \end{tikzpicture}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[tikz,fontsize=8pt,border=0pt]{standalone}
+\input{../style}
+\usepackage{scrextend}
+\changefontsizes[8pt]{8pt}
+\usetikzlibrary{decorations.pathreplacing}
+\begin{document}
+  \begin{tikzpicture}
+  \useasboundingbox (-1.51,-1.51) rectangle (1.51,1.51);
+  \draw [step=0.5,lightgray] (-1.5,-1.5) grid (1.5,1.5);
+  \node at (-0.15,-0.2) {0};
+  \node at (-0.15,0.5) {1};
+  \node at (0.5,-0.2) {1};
+  \draw[->] (-1.5,0) -- (1.5,0) node[below left] {$x$};
+  \draw[->] (0,-1.5) -- (0,1.5) node[below left] {$y$};
+  
+  \draw[bookpink, line width=0.2mm]
+  (-1,0.5) .. controls (-1,0.4) and (-0.5,-0.5) .. 
+  (0,-0.5) .. controls (0.5,-0.5) and (0.2,0.8)    .. (1,1);
+  
+  \fill[bookpink](-1,0.5) circle (0.4mm);
+  \fill[bookpink](1,1) circle (0.4mm);
+  \end{tikzpicture}
+\end{document}

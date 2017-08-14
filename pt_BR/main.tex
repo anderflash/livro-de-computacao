@@ -21,18 +21,34 @@
 \setlist{nosep}
 \usepackage{hypcap}
 \usepackage{adjustbox}
-\def\itemrange#1{%
-  \addtocounter{enumi}{1}%
-  \edef\labelenumi{\theenumi--\noexpand\theenumi}%
-  \addtocounter{enumi}{-1}%
-  \addtocounter{enumi}{#1}%
-  \item
-  \def\labelenumi{\theenumi}}
+\usepackage{fancyhdr}
+%\def\itemrange#1{%
+%  \addtocounter{enumi}{1}%
+%  \edef\labelenumi{\theenumi--\noexpand\theenumi}%
+%  \addtocounter{enumi}{-1}%
+%  \addtocounter{enumi}{#1}%
+%  \item
+%  \def\labelenumi{\theenumi}}
 \newcommand\NoIndent[1]{%
-  \par\vbox{\parbox[t]{\linewidth}{#1}}%
+  \par\vbox{\parbox[t]{\columnwidth}{#1}}%
 }
+\def\exampleEnd{
+  \definecolor{rulecolor}{named}{bookpink}
+  \noindent\rule{\columnwidth}{0.5pt}
+  \definecolor{rulecolor}{named}{bookblue}
+}
+\input xintexpr.sty\relax
+\def\next#1#2{\numexpr #1 + #2 \relax}
+\def\roundandprint #1{\xinttheiexpr #1\relax }
+\def\rangeItem#1#2{\NoIndent{\textcolor{bookblue}{\textbf{#1}} #2}}
+\def\difficultQuestion{\textcolor{bookpink}{\textbf{\stepcounter{enumi}\arabic{enumi}.}}}
 \def\solution{\noindent\textcolor{bookpink}{SOLUÇÃO}\hspace{2mm}}
 \def\example#1{\vspace{0.2cm}\noindent\textcolor{bookpink}{\textbf{EXEMPLO #1\hspace{1.8mm}}}}
+
+\makeatletter
+\let\old@rule\@rule
+\def\@rule[#1]#2#3{\textcolor{rulecolor}{\old@rule[#1]{#2}{#3}}}
+\makeatother
 
 \newsavebox{\measurebox}
 
@@ -61,18 +77,29 @@
 \titlespacing*{\subsection}
 {0pt}{1ex plus 0.5ex minus .2ex}{0.6ex plus .2ex}
 \input{style}
-
+\definecolor{rulecolor}{named}{bookblue}
 \setcounter{tocdepth}{1}
+
+\let\Oldpart\part
+\newcommand{\parttitle}{}
+\renewcommand{\part}[1]{\Oldpart{#1}\renewcommand{\parttitle}{#1}}
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{\parttitle--\rightmark}
+\lfoot{\small\itshape Dr. Anderson Carlos Moreira Tavares <acmt at outlook com>}
 
 \author{Anderson Tavares}
 \title{Um pouco de tudo sobre computação}
 \begin{document}
-  \maketitle
-  \tableofcontents
+  %\maketitle
+  %\tableofcontents
   \input{calculus}
-  \input{linear_algebra}
-  \input{graph_theory}
-  \input{signal_processing}
-  \input{image_processing}
-  \input{machine_learning}
+  %\input{linear_algebra}
+  %\input{graph_theory}
+  %\input{signal_processing}
+  %\input{image_processing}
+  %\input{machine_learning}
 \end{document}

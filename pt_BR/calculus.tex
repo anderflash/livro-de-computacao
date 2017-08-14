@@ -210,7 +210,8 @@ Outra interpretação de $f$ é como um \textbf{diagrama de setas} (Figura~\ref{
   \item Vemos que o ponto (1, 3) está no gráfico de $f$, então $f(1) = 3$. Contando 5 unidades no eixo $x$, $f(5)$ se situa cerca de 0.7 unidades abaixo do eixo $y$ ($f(5)\approx-0.7$).
   \item $f(x)$ é definido quando $0\leq x \leq 7$, então o domínio é o intervalo [0,7]. Veja que f é definido quando $-2\leq y \leq 4$, então a imagem é o intervalo [-2,4].
 \end{enumerate}
-
+\vspace{-0.2cm}
+\exampleEnd
 \example{2} Desenhe o gráfico e ache o domínio e imagem de:
 \vspace{-0.4cm}\begin{multicols}{2}
   \begin{enumerate}[label=(\alph*)]
@@ -228,7 +229,9 @@ Outra interpretação de $f$ é como um \textbf{diagrama de setas} (Figura~\ref{
   \subfloat[Linha\label{fig:ex2-line}]{\includegraphics{calculus/ex2-line}}%
   \subfloat[Parábola\label{fig:ex2-parabola}]{\includegraphics{calculus/ex2-parabola}}%
   \caption{Gráficos do Exemplo 2}
-\end{figure}\vspace{-0.4cm}
+\end{figure}
+\vspace{-0.6cm}
+\exampleEnd
 \example{3} Se $f(x)=2x^2-5x+1$ e $h\neq 0$, avalie $\displaystyle\frac{f(a+h)-f(a)}{h}$, o qual é denominada \textbf{quociente diferencial}, a taxa de variação de f(x) entre $x=a$ e $x=a+h$
 
 \solution Obtemos $f(a+h)$ trocando $x$ por $a+h$ na equação de $f(x)$:
@@ -246,6 +249,11 @@ Então substituímos na expressão dada e o simplificamos: $$
 &=\frac{4ah+2h^2-5h}{h}=4a+2h-5
 \end{aligned}
 $$
+
+\vspace{-0.1cm}
+\exampleEnd
+\vspace{-0.9cm}
+
 \subsubsection{Representação de funções}
 Há 4 formas de representar uma função: verbalmente (por uma descrição em palavras), numericamente (por uma tabela de valores), visualmente (por um gráfico) e algebricamente (por uma fórmula explícita). É interessante saber como mudar representações de uma dada função (No Exemplo 2 iniciamos com fórmulas algébricas e obtivemos os gráficos).
 
@@ -297,13 +305,16 @@ Outro exemplo descrito em palavras: seja $C(p)$ o custo de enviar um envelope de
   \caption{(a) Torneira de água quente e (b) Container de armazenamento.}
   \vspace{-0.5cm}
 \end{figure}
-
+\vspace{-0.3cm}
+\exampleEnd
 \example{5} Um container de armazenamento retangular com o topo aberto tem um volume de 10$\si\meter^3$. O comprimento de sua base é o dobro da sua largura. O material para a base custa R\$10 por $\si{\meter}^2$; o material para os lados custa R\$6 por $\si{\meter}^2$. Expresse o custo dos materiais como uma função da largura da base.
 
 \solution Desenhemos um diagrama como na Figura~\ref{fig:storage-container} e seja $l$ e $2l$ respectivamente a largura e comprimento da base, e $a$ sua altura. A área da base é $(2l)l=2l^2$, então o custo, em reais, do material para a base é $20l^2$. Dois lados tem área $la$ e os outros dois tem área $2la$. Então os 4 lados custam $6(2la + 4la)=36la$. O custo total é $C=20l^2+36la$. Como a caixa tem $10\si\meter^3$ de volume, então $l(2l)a = 10$. Assim, $\displaystyle a=\frac{10}{2l^2}=\frac{5}{l^2}$. Substituindo em $C$: $$C = 20l^2+36l\left(\frac{5}{l^2}\right) = 20l^2+\frac{180}{l}$$.
 Assim a equação seguinte expressa $C$ em função apenas de $l$:
 $$C(l)=20l^2+\frac{180}{l}\hspace{0.5cm} l > 0$$
+\vspace{-0.6cm}
 
+\exampleEnd
 \example{6} Encontre o domínio de cada função
 \vspace{-0.3cm}\begin{multicols}{2}
   \begin{enumerate}[label=(\alph*)]
@@ -316,7 +327,8 @@ $$C(l)=20l^2+\frac{180}{l}\hspace{0.5cm} l > 0$$
   \item Como a raiz quadrada de um número negativo não é definido (como um número real), o domínio de $f$ consiste em todos os valores de $x$ tais que $x+2 \geq 0$, ou seja, $x \geq -2$. Então o domínio é o intervalo $[-2,\infty)$
   \item Como $\displaystyle g(x)=\frac{1}{x^2-x}=\frac{1}{x(x-1)}$, e divisão por 0 não é permitida, $g(x)$ não é definida quando $x=0$ ou $x=1$. Então o domínio de $g$ é $\{x:x\neq 0, x\neq 1\}=(-\infty,0)\cup(0,1)\cup(1,\infty)$.
 \end{enumerate}
-
+\vspace{-0.2cm}
+\exampleEnd
 O gráfico de uma função no plano-$xy$ é uma curva. Mas todas as curvas no plano-$xy$ são gráficos de funções?
 \vspace{-0.3cm}
 \subsubsection{Teste da linha vertical}
@@ -349,9 +361,9 @@ Este é um exemplo de função com duas regras aplicadas em faixas diferentes no
   \subfloat[\label{fig:absolute-value}]{\includegraphics[width=0.29\columnwidth]{calculus/absolute-value}}%
   \subfloat[\label{fig:ex9}]{\includegraphics[width=0.42\columnwidth]{calculus/ex9}}%
   \caption{Gráfico: (a) Exemplo 7, (b) Exemplo 8 e (c) Exemplo 9.}
-  \vspace{-0.5cm}
+  \vspace{-0.7cm}
 \end{figure}
-
+\exampleEnd
 \example{8} Desenhe a função de valor absoluto $f(x) = |x|$.
 
 \solution
@@ -361,34 +373,38 @@ x &\text{ se } x \geq 0\\
 \end{cases}$$
 
 \noindent Podemos desenhar separadamente f(x) = x e f(x) = -x (Figura~\ref{fig:absolute-value}). Não é necessário desenhar os pontos aberto e fechado em $x=0$.
+\vspace{-0.7cm}
 
+\exampleEnd
 \example{9} Encontre uma fórmula $f$ desenhada na Figura~\ref{fig:ex9}
-
 \solution A linha entre (0,0) e (1,1) tem declive $m = 1$ e y-intercepto $b=0$. Então sua equação é $y=x$. Então a primeira parte da fórmula é $f(x) = x$ se $0\leq x \leq 1$. A linha entre (1,1) e (2,0) tem declive $m=-1$, e como $m=\Delta y/\Delta x=(y-y_0)/(x-x_0)$, onde $(x_0,y_0)$ é um ponto conhecido: $-1 = (y-0)/(x-2) \Rightarrow y=2-x$. Encontramos a segunda regra: $f(x) = 2-x$, se $1<x\leq 2$. Veja que a terceira parte do gráfico coincide com o eixo $x$ para $x>2$, ou seja, $f(x)=0$ se $x>2$. Juntando as regras: $$f(x)=\begin{cases}
 x & \text{ se } 0 \leq x \leq 1\\
 2-x & \text{ se } 1 < x \leq 2\\
 0 & \text{ se } x > 2
 \end{cases}$$
-\vspace{-0.5cm}
-%\example{10} No Exemplo C desta seção consideramos o custo $C(p)$ de enviar um envelope de peso $p$. Usando a tabela dos Correios, temos:
 
+%\example{10} No Exemplo C desta seção consideramos o custo $C(p)$ de enviar um envelope de peso $p$. Usando a tabela dos Correios, temos:
+\vspace{-0.2cm}
+\exampleEnd
+\vspace{-1cm}
 \subsubsection{Simetria}
+\vspace{-0.2cm}
 Se $f(-x)=f(x)$ para todo número $x$ no seu domínio, então $f$ é uma \textbf{função par}. Por exemplo, a função $f(x)=x^2$ é par pois $f(-x)=(-x)^2 = x^2 = f(x)$. A interpretação geométrica é que o eixo $y$ se comporta como um espelho, refletindo o gráfico da metade do domínio na outra (Figura~\ref{fig:even-function}).
 
-Se $f(-x)=-f(x)$ para todo número $x$ no seu domínio, então $f$ é uma \textbf{função ímpar}. Por exemplo, $f(x) = x^3$ é ímpar pois $f(-x) = (-x)^3 = -x^3 = -f(x)$. O gráfico é simétrico na origem. Teremos o mesmo gráfico se rotacioná-lo a $180\degree$ da origem (Figura~\ref{fig:odd-function}).
+Se $f(-x)=-f(x)$ para todo $x$ no seu domínio, então $f$ é uma \textbf{função ímpar}. Por exemplo, $f(x) = x^3$ é ímpar pois $f(-x) = (-x)^3 = -x^3 = -f(x)$. O gráfico é simétrico na origem. Teremos o mesmo gráfico se rotacioná-lo a $180\degree$ da origem (Figura~\ref{fig:odd-function}).
 \begin{figure}[!ht]
   \centering
-  \subfloat[\label{fig:even-function}]{\includegraphics[width=0.276\columnwidth]{calculus/even-function}}
-  \subfloat[\label{fig:odd-function}]{\includegraphics[width=0.29\columnwidth]{calculus/odd-function}}
-  \caption{Gráfico: (a) Exemplo 7, (b) Exemplo 8 e (c) Exemplo 9.}
+  \subfloat[Função par\label{fig:even-function}]{\includegraphics[width=0.4\columnwidth]{calculus/even-function}}
+  \subfloat[Função ímpar\label{fig:odd-function}]{\includegraphics[width=0.4\columnwidth]{calculus/odd-function}}
+  \caption{}
   \vspace{-0.5cm}
 \end{figure}
 
-\example{11} Determine se cada uma das seguintes funções é par, ímpar ou nem par nem ímpar. 
+\example{10} Determine se cada uma das seguintes funções é par, ímpar ou nem par nem ímpar. 
 
-\vspace{-0.6cm}
+\vspace{-0.35cm}
 \begin{multicols}{3}
-\vspace{-1cm}
+\vspace{-0.5cm}
   \begin{enumerate}[label=(\alph*)]
     \item $f(x) = x^5 + x$
     \item $g(x) = 1-x^4$
@@ -406,22 +422,23 @@ Se $f(-x)=-f(x)$ para todo número $x$ no seu domínio, então $f$ é uma \textb
 \end{enumerate}\vspace{-0.7cm}
 \begin{figure}[!ht]
   \centering
-  \subfloat[\label{fig:ex10-a}]{\includegraphics[width=0.276\columnwidth]{calculus/even-function}}
-  \subfloat[\label{fig:ex10-b}]{\includegraphics[width=0.29\columnwidth]{calculus/odd-function}}
-  \subfloat[\label{fig:ex10-c}]{\includegraphics[width=0.29\columnwidth]{calculus/odd-function}}
-  \caption{Gráfico: (a) Exemplo 7, (b) Exemplo 8 e (c) Exemplo 9.}
+  \subfloat[\label{fig:ex10-a}]{\includegraphics[width=0.3\columnwidth]{calculus/ex10-a}}
+  \subfloat[\label{fig:ex10-b}]{\includegraphics[width=0.3\columnwidth]{calculus/ex10-b}}
+  \subfloat[\label{fig:ex10-c}]{\includegraphics[width=0.3\columnwidth]{calculus/ex10-c}}
+  \caption{Gráficos do Exemplo 10.}
   \label{fig:ex10}
-  \vspace{-0.5cm}
+  \vspace{-0.7cm}
 \end{figure}
-
+\exampleEnd
+  \vspace{-0.9cm}
 \subsubsection{Funções crescentes e decrescentes}
 
 O gráfico da Figura~\ref{fig:increasing-decreasing} cresce de $A$ a $B$, decresce de $B$ a $C$, e cresce novamente de $C$ a $D$. Diz-se que a função $f$ é crescente no intervalo [a,b], decrescente em [b,c] e crescente de novo em [c,d]. De maneira geral, a função $f$ é \textbf{crescente} ou \textbf{decrescente} num intervalo $I$ se respectivamente $f(x_1) < f(x_2)$ ou $f(x_1) > f(x_2)$, para todo $x_1 < x_2$ em $I$. Veja na Figura~\ref{fig:increasing-decreasing-parabola} que a função $f(x) = x^2$ é decrescente no intervalo $(\infty, 0]$ e crescente no intervalo $[0,\infty)$.
 \vspace{-0.5cm}\begin{figure}[!ht]
   \centering
-  \subfloat[\label{fig:increasing-decreasing}]{\includegraphics[width=0.3\columnwidth]{calculus/even-function}}
-  \subfloat[\label{fig:increasing-decreasing-parabola}]{\includegraphics[width=0.29\columnwidth]{calculus/odd-function}}
-  \caption{Gráfico: (a) Exemplo 7, (b) Exemplo 8 e (c) Exemplo 9.}
+  \subfloat[\label{fig:increasing-decreasing}]{\includegraphics[width=0.515\columnwidth]{calculus/increasing-decreasing}}
+  \subfloat[\label{fig:increasing-decreasing-parabola}]{\includegraphics[width=0.33\columnwidth]{calculus/increasing-decreasing-parabola}}
+  \caption{(a) $x_1$ e $x_2$ num intervalo crescente, (b) parábola.}
   \vspace{-0.5cm}
 \end{figure}
 
@@ -429,7 +446,7 @@ O gráfico da Figura~\ref{fig:increasing-decreasing} cresce de $A$ a $B$, decres
 
 \begin{enumerate}[label=\textbf{\arabic*.},leftmargin=*]
   \item Se $f(x)=x+\sqrt{2-x}$ e $g(u)=u+\sqrt{2-u}$, é verdade que $f=g$?
-  \item Se $\displaystyle f(x)=\frac{x^2-x}{x-1}$ e $\displaystyle g(x)=x$, é verdade que $f=g$?
+  \item Se $\displaystyle f(x)=\frac{x^2-x}{x-1}$ e $\displaystyle g(x)=x$, é verdade que $f=g$?\vspace{0.6mm}
   \item O gráfico da função $f$ é dada na Figura~\ref{fig:2-1-exercicio3}.
   \begin{enumerate}
     \item Dê o valor de $f(1)$.
@@ -441,18 +458,18 @@ O gráfico da Figura~\ref{fig:increasing-decreasing} cresce de $A$ a $B$, decres
   \end{enumerate}\vspace{-0.3cm}
   \begin{figure}[!ht]
     \centering
-    \begin{minipage}{0.4\columnwidth}
-        \includegraphics[width=\columnwidth]{calculus/graph}
+    \begin{minipage}{0.426\columnwidth}
+        \includegraphics[width=\columnwidth]{calculus/ex2-1-6-3}
         \caption{Exercício 3}
         \label{fig:2-1-exercicio3}
     \end{minipage}
-    \begin{minipage}{0.4\columnwidth}
-        \includegraphics[width=\columnwidth]{calculus/graph}
+    \begin{minipage}{0.40\columnwidth}
+        \includegraphics[width=\columnwidth]{calculus/ex2-1-6-4}
         \caption{Exercício 4}
         \label{fig:2-1-exercicio4}
     \end{minipage}
   \end{figure}
-  \item Os gráficos de $f$ e $g$ são dados na Figura\ref{fig:2-1-exercicio4}
+  \item[\difficultQuestion] Os gráficos de $f$ e $g$ são dados na Figura~\ref{fig:2-1-exercicio4}.
   \begin{enumerate}
     \item Obtenha os valores de $f(-4)$ e $g(3)$.
     \item $f(x)=g(x)$ para quais valores de $x$?
@@ -464,14 +481,14 @@ O gráfico da Figura~\ref{fig:increasing-decreasing} cresce de $A$ a $B$, decres
   \item Nesta seção discutimos exemplos de funções usadas no dia-a-dia: População como função do tempo, custo de postagem como função de peso, temperatura da água como função do tempo. Dê três outros exemplos de funções descritas verbalmente. O que dizer sobre o domínio e imagem de cada uma? Se possível, desenhe um esboço do gráfico de cada uma.
   
   \vspace{0.2cm}
-  \NoIndent{\textcolor{bookblue}{\textbf{6-9}} Determine se a curva é um gráfico de uma função de $x$. Se sim, diga o domínio e imagem dela.}
-  \vspace{0.2cm}
+  \rangeItem{6-9}{Determine se a curva é um gráfico de uma função de $x$. Se sim, diga o domínio e imagem dela.}
+  \vspace{0.0cm}
   
   \begin{multicols}{2}
-  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/graph}}
-  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/graph}}
-  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/graph}}
-  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/graph}}
+  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/ex2-1-6-7}}
+  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/ex2-1-6-8}}
+  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/ex2-1-6-9}}
+  \item \adjustbox{valign=t}{\includegraphics[width=0.9\columnwidth]{calculus/ex2-1-6-10}}
   \end{multicols}
   \item A Figura~\ref{fig:2-1-exercicio10} é um gráfico da temperatura global $T$ durante o século XX. Estime:
   \begin{enumerate}
@@ -484,12 +501,12 @@ O gráfico da Figura~\ref{fig:increasing-decreasing} cresce de $A$ a $B$, decres
     \centering
     \begin{minipage}{0.49\columnwidth}
       \includegraphics[width=\columnwidth]{calculus/graph}
-      \caption{Exercício 3}
+      \caption{Exercício 10}
       \label{fig:2-1-exercicio10}
     \end{minipage}
     \begin{minipage}{0.49\columnwidth}
       \includegraphics[width=\columnwidth]{calculus/graph}
-      \caption{Exercício 4}
+      \caption{Exercício 11}
       \label{fig:2-1-exercicio11}
     \end{minipage}
   \end{figure}
@@ -498,18 +515,18 @@ O gráfico da Figura~\ref{fig:increasing-decreasing} cresce de $A$ a $B$, decres
     \item Qual a imagem da função de largura do anel?
     \item O que o gráfico nos diz sobre a temperatura da terra? O gráfico reflete as erupções vulcânicas do século XIX?
   \end{enumerate}
-  \item Você poe alguns cubos no copo, enche-o de água fria, e o deixa sobre a mesa. Descreva como a temperatura da água muda conforme o tempo passa. Desenhe o esboço do gráfico da temperatura da água em função do tempo decorrido.
+  \item[\difficultQuestion] Você poe alguns cubos no copo, enche-o de água fria, e o deixa sobre a mesa. Descreva como a temperatura da água muda conforme o tempo passa. Desenhe o esboço do gráfico da temperatura da água em função do tempo decorrido.
   \item Três corredores competem em uma corrida de $100\si{\meter}$. O gráfico da Figura~\ref{fig:2-1-exercicio12} mostra a distância percorrida por cada corredor em função do tempo. Descreva o que o gráfico diz sobre esta corrida. Quem a venceu? Todos a terminaram?
   \begin{figure}[!ht]
     \centering
     \begin{minipage}{0.49\columnwidth}
       \includegraphics[width=\columnwidth]{calculus/graph}
-      \caption{Exercício 3}
+      \caption{Exercício 13}
       \label{fig:2-1-exercicio12}
     \end{minipage}
     \begin{minipage}{0.49\columnwidth}
       \includegraphics[width=\columnwidth]{calculus/graph}
-      \caption{Exercício 4}
+      \caption{Exercício 14}
       \label{fig:2-1-exercicio13}
     \end{minipage}
   \end{figure}
@@ -518,20 +535,331 @@ O gráfico da Figura~\ref{fig:increasing-decreasing} cresce de $A$ a $B$, decres
     \item Qual é o consumo de potência às 6 AM? E às 6 PM?
     \item Quando o consumo foi o menor? E o maior? Há sentido nestes tempos?
   \end{enumerate}
+  \item Um avião decola do aeroporto e pousa uma hora depois em outro, 400$\si\km$ distante. Se $t$ é o tempo em minutos desde que o avião deixa o terminal, seja $x(t)$ a distância horizontal percorrida e $y(t)$ a altitude do avião.
+  \begin{enumerate}
+    \item Desenhe um possível gráfico de $x(t)$.
+    \item Desenhe um possível gráfico de $y(t)$.
+    \item Desenhe um possível gráfico da velocidade no solo.
+    \item Desenhe um possível gráfico da velocidade vertical.
+  \end{enumerate}
+  \item Leituras da temperatura $T$ (em $\si\degreeCelsius$) foram gravadas a cada duas horas de 0AM às 2PM em São Paulo em 4 de Junho de 2013. O tempo $t$ foi medido em horas desde a meia noite.\begin{table}[!ht]
+    \centering
+    \vspace{-0.3cm}
+    \begin{tabular}{|>{\centering\columncolor{bookbluearea}}m{0.5cm}|c|c|c|c|c|c|c|c|}\hline
+      $t$&0&2&4&6&8&10&12&14\\\hline
+      $T$&74&69&68&66&70&78&82&86\\\hline
+    \end{tabular}
+    \vspace{-0.3cm}
+  \end{table}
+  \begin{enumerate}
+    \item Pelos dados, desenhe o gráfico de $T$ como função de $t$.
+    \item Use seu gráfico para estimar a temperatura às 9AM.
+  \end{enumerate}
+  \item Pesquisadores mediram a concentração de álcool no sangue (BAC em $\si{\gram}/\si{\deci\liter}$) de oito adultos do gênero masculino após rápido consumo de $30\si\milli\si\liter$ de etanol (dois drinques)
+  \begin{table}[!ht]
+    \centering
+    \setlength\tabcolsep{0.15cm}
+    \vspace{-0.3cm}
+    \begin{tabular}{|>{\centering\columncolor{bookbluearea}}m{0.7cm}|c|c|c|c|c|c|c|}\hline
+      $t$ ($\si\hour$)&0&0.2&0.5&0.75&1.0&1.25&1.5\\\hline
+      BAC&0&0.025&0.041&0.040&0.033&0.029&0.024\\\hline\hline
+      $t$ ($\si\hour$)&1.75&2.0&2.25&2.5&3.0&3.5&4.0\\\hline
+      BAC&0.022&0.018&0.015&0.012&0.007&0.003&0.001\\\hline
+    \end{tabular}
+  \vspace{-0.3cm}
+  \end{table}
+  \begin{enumerate}
+    \item Dos dados, desenhe o gráfico do BAC como função de $t$.
+    \item Use seu gráfico para descrever como o efeito do álcool varia com o tempo.
+  \end{enumerate}
+  \item Se $f(x)=3x^2-x+2$, encontre $f(2)$, $f(a)$, $f(-a)$, $f(a+1)$, $2f(a)$, $f(2a)$, $f(a^2)$, $[f(a)]^2$ e $f(a+h)$.
+  \item Um balão esférico com raio $r$ infla com volume $V(r)=\frac{4}{3}\pi r^3$. Encontre uma função que representa a quantidade de ar requerida para inflar o balão de um raio de $r~\si{\centi\meter}$ para um raio de $r+1~\si{\centi\meter}$.
+  \rangeItem{\hspace{-0.2cm}20-23}{Avalia o quociente diferença e simplifica tua resposta}
+  
+  \item[\difficultQuestion] $\displaystyle f(x)=4+3x+x^2$, $\displaystyle \frac{f(3+h)-f(3)}{h}$
+  \item $\displaystyle f(x)=x^3$, $\displaystyle \frac{f(a+h)-f(a)}{h}$
+  \item $\displaystyle f(x)=\frac{1}{x}$, $\displaystyle \frac{f(x)-f(a)}{x-a}$
+  \item $\displaystyle f(x)=\frac{x+3}{x+1}$, $\displaystyle \frac{f(x)-f(1)}{x-1}$
+  \NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \clearpage\rangeItem{\hspace{-0.2cm}24-30}{Encontre o domínio das funções}
+  \begin{tabular}{@{}m{\dimexpr.5\columnwidth-.5\columnsep}m{\dimexpr.5\columnwidth-.5\columnsep}@{}}
+    \item $\displaystyle f(x)=\frac{x+4}{x^2-9}$ &
+    \item $\displaystyle f(x)=\frac{2x^3-5}{x^2+x-6}$ \\\vspace{0.2cm}
+    \item $\displaystyle f(x)=\sqrt[3]{2t-1}$ &
+    \item $\displaystyle f(x)=\sqrt{3-t}-\sqrt{2+t}$\\
+    \item $\displaystyle h(x)=\frac{1}{\sqrt[4]{x^2-5x}}$ &
+    \item $\displaystyle f(u)=\frac{u+1}{1+\frac{1}{u+1}}$\\\vspace{0.2cm}
+    \item $\displaystyle F(p)=\sqrt{2-\sqrt{p}}$
+  \end{tabular}
+  \NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \item Encontre o domínio e imagem e desenhe $h(x)=\sqrt{4-x^2}$
+  \rangeItem{\hspace{-0.2cm}32-33}{Encontre o domínio e desenhe o gráfico}
+  \begin{tabular}{@{}m{\dimexpr.5\columnwidth-.5\columnsep}m{\dimexpr.5\columnwidth-.5\columnsep}@{}}
+      \vspace{0.2cm}\item $\displaystyle f(x)=1,6x-2,4$ &
+      \item $\displaystyle g(x)=\frac{t^2-1}{t+1}$
+  \end{tabular}
+  \NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \rangeItem{\hspace{-0.2cm}34-37}{Avalie $f(-3), f(0)$, e $f(2)$ para a função definida em trechos. Então desenhe o gráfico da função.}
+  \begin{tabular}{@{}m{\dimexpr.5\columnwidth-.5\columnsep}m{\dimexpr.5\columnwidth-.5\columnsep}@{}}
+  \item $\displaystyle f(x)=\begin{cases}
+  x+2 & \text{ se } x<0\\
+  1-x & \text{ se } x\geq 0
+  \end{cases}$&
+  \item $\displaystyle f(x)=\begin{cases}
+  3-\frac{1}{2}x & \text{ se } x<2\\
+  2x-5 & \text{ se } x\geq 2
+  \end{cases}$\\
+  \item $\displaystyle f(x)=\begin{cases}
+  x+1 & \text{ se } x\leq -1\\
+  x^2 & \text{ se } x>-1
+  \end{cases}$&
+  \item $\displaystyle f(x)=\begin{cases}
+  -1  & \text{ se } x\leq 1\\
+  7-2x & \text{ se } x>1
+  \end{cases}$
+  \end{tabular}
+  \NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \rangeItem{\hspace{-0.2cm}38-43}{Desenhe o gráfico da função}
+  \begin{tabular}{@{}m{\dimexpr.5\columnwidth-.5\columnsep}m{\dimexpr.5\columnwidth-.5\columnsep}@{}}
+    \item $\displaystyle f(x)=x+|x|$&
+    \item $\displaystyle f(x)=|x+2|$\\
+    \item $\displaystyle g(t)=|1-3t|$&
+    \item $\displaystyle h(t)=|t|+|t+1|$\\
+    \item $\displaystyle f(x)=\begin{cases}
+    |x| & \text{ se } |x|\leq 1\\
+    1 & \text{ se } |x| > 1
+    \end{cases}$&
+    \item $\displaystyle g(x)=\left||x|-1\right|$
+  \end{tabular}
+  \NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \rangeItem{\hspace{-0.2cm}44-49}{Encontre uma expressão para a função cujo gráfico é a curva dada}\vspace{0.1cm}
+  \item O segmento de linha conectando os pontos $(1,-3)$ e $(5,7)$
+  \item O segmento de linha conectando os pontos $(-5,10)$ e $(7,10)$
+  \item[\difficultQuestion] A metade de baixo da parábola $x+(y-1)^2=0$
+  \item A metade de cima do círculo $x^2+(y-2)^2=4$
+  
+  \begin{tabular}{@{}m{\dimexpr.5\columnwidth-.5\columnsep}m{\dimexpr.5\columnwidth-.5\columnsep}@{}}
+    \item \adjustbox{valign=t}{\includegraphics[width=0.42\columnwidth]{calculus/ex2-1-6-7}} &
+    \item \adjustbox{valign=t}{\includegraphics[width=0.42\columnwidth]{calculus/ex2-1-6-7}}
+  \end{tabular}
+  \NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \rangeItem{\hspace{-0.2cm}50-54}{Encontre uma fórmula e defina o domínio}
+  \item Um retângulo tem perímetro $20\si{\meter}$. Expresse a área do retângulo como função do comprimento de um dos lados.
+  \item Um retângulo tem área $16\si{\meter}^2$. Expresse o perímetro do retângulo como função do comprimento de um dos lados.
+  \item Expresse a área de um triângulo equilátero como função do comprimento de um lado.
+  \item O comprimento de uma caixa retangular fechada com volume $24~\si{\centi\meter}^3$ é o dobro da sua largura. Expresse a altura da caixa como função da largura.
+  \item[\difficultQuestion] Uma caixa regular aberta com volume $2\si{\meter}^3$ tem uma base quadrada. Expresse a área da superfície da caixa como função do comprimento de um lado da base.
+  \vspace{-0.25cm}\NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \vspace{-0.05cm}
+  \item Uma janela de Norman tem o formato retangular encimado por semicírculo (Figura~\ref{fig:2-1-exercicio55}). Se o perímetro da janela é 1cm, expresse a área $A$ da janela como função da largura $x$.
+  \item Uma caixa com o topo aberto pode ser construído a partir de um pedaço de cartolina com dimensões $30\si{\centi\meter}\times51\si{\centi\meter}$ removendo quadrados iguais de lado $x$ em cada canto e dobrando os lados (Figura~\ref{fig:2-1-exercicio56}). Expresse o volume $V$ como função de $x$.
+  \begin{figure}[!ht]
+    \centering
+    \begin{minipage}{0.49\columnwidth}
+      \includegraphics[width=\columnwidth]{calculus/graph}
+      \caption{Exercício 13}
+      \label{fig:2-1-exercicio55}
+    \end{minipage}
+    \begin{minipage}{0.49\columnwidth}
+      \includegraphics[width=\columnwidth]{calculus/graph}
+      \caption{Exercício 14}
+      \label{fig:2-1-exercicio56}
+    \end{minipage}\vspace{-1.5cm}
+  \end{figure}
+  \item Um plano de telefone móvel tem uma cobrança básica de R\$50 ao mês. O plano inclui 400 minutos e cobra 30 centavos por cada minuto de uso adicional. Escreva o custo mensal $C$ como função do número $x$ de minutos usados e desenhe como função de $x$ para $0\leq x\leq 600$.
+  \item Em uma região a velocidade máxima permitida nas estradas é $150~\si{\kilo\meter/\hour}$ e a mínima é $60~\si{\kilo\meter/\hour}$. A multa por violar tais limites é $R\$30$ por cada $\si{\kilo\meter/\hour}$ acima do máximo ou abaixo do mínimo. Expresse o valor da multa $M$ como função da velocidade $x$ e desenhe $M(x)$ para $0\leq x\leq 200$.
+  \item Uma companhia de eletricidade cobra de seus consumidores uma taxa básica de 10R\$ ao mês, mais 6 centavos por kilowatt-hora (kWh) para os primeiros 1200kWh e 7 centavos por kWh para qualquer uso acima de 1200kWh. Expresse o custo mensal $E$ como função da quantidade $x$ de potência elétrica usada. Então desenhe a função $E$ para $0\leq x\leq 2000$.
+  \item[\difficultQuestion] Em um certo país, o imposto salarial é definido como se segue. Não há imposto até R\$10.000. Para qualquer salário acima de R\$10.000 até R\$20.000, a taxa é de 10\%. Para salários acima de R\$20.000, a taxa é de 5\%.
+  \begin{enumerate}
+    \item Desenhe o gráfico da taxa $T$ como função do salário $s$.
+    \item Qual o valor do imposto para R\$14.000? E R\$26.000?
+    \item Plote o gráfico do imposto $I$ como função do salário $s$.
+  \end{enumerate}
+  \rangeItem{\hspace{-0.2cm}61-62}{Os gráficos de $f$ e $g$ são mostrados. Decida se cada função é par, ímpar ou nenhum. Explique seu raciocínio.}
+  \begin{tabular}{@{}m{\dimexpr.5\columnwidth-.5\columnsep}m{\dimexpr.5\columnwidth-.5\columnsep}@{}}
+    \item \adjustbox{valign=t}{\includegraphics[width=0.42\columnwidth]{calculus/ex2-1-6-7}} &
+    \item \adjustbox{valign=t}{\includegraphics[width=0.42\columnwidth]{calculus/ex2-1-6-7}}
+  \end{tabular}
+  \NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \item \begin{enumerate}
+    \item Se o ponto $(5,3)$ está no gráfico de uma função par, qual outro ponto deve também estar?
+    \item Se o ponto $(5,3)$ está no gráfico de uma função ímpar, qual outro ponto deve também estar?
+  \end{enumerate}
+  \item Uma função $f$ tem domínio [-5,5] e uma porção do seu gráfico é mostrado.
+  \begin{enumerate}
+    \item Complete o gráfico de $f$ se é sabido ser par.
+    \item Complete o gráfico de $f$ se é sabido ser ímpar.
+  \end{enumerate}
+  \rangeItem{\hspace{-0.2cm}65-70}{Determine se $f$ é par, ímpar ou nenhum. Se você tem uma calculadora ou software gráficos, use-a para checar suas respostas visualmente}
+  \begin{tabular}{@{}m{\dimexpr.5\columnwidth-.5\columnsep}m{\dimexpr.5\columnwidth-.5\columnsep}@{}}
+    \item $\displaystyle f(x)=\frac{x}{x^2+1}$&
+    \item $\displaystyle f(x)=\frac{x^2}{x^4+1}$\\\vspace{1mm}
+    \item $\displaystyle f(x)=\frac{x}{x+1}$&
+    \item $\displaystyle f(x)=x|x|$\\\vspace{1mm}
+    \item $\displaystyle f(x)=1+3x^2-x^4$&
+    \item $\displaystyle f(x)=1+3x^3-x^5$\\\vspace{1mm}
+  \end{tabular}
+  \vspace{-0.8cm}\NoIndent{\hspace{-0.2cm}\rule{1.02\columnwidth}{0.5pt}}
+  \item Se $f$ e $g$ são funções pares, $f+g$ é par? Se $f$ e $g$ são ímpares, $f+g$ é ímpar? E se $f$ é par e $g$ é ímpar? Explique.
+  \item Se $f$ e $g$ são funções pares, o produto $fg$ é par? Se $f$ e $g$ são ímpares, $fg$ é ímpar? E se $f$ é par e $g$ é ímpar? Explique.
 \end{enumerate}
 
-\subsection{Modelos matemáticos: um catálogo de funções essenciais}
+\subsection{Modelos matemáticos e funções essenciais}
 
 Um \textbf{modelo matemático} é uma descrição matemática de um fenômeno do mundo real como o tamanho da população, a demanda de um produto, a velocidade de um objeto em queda, a concentração de um produto em uma reação química, a expectativa de vida de uma pessoa, ou a economia de reduções de emissões. O propósito do modelo é entender o fenômeno e talvez fazer predições sobre o comportamento futuro.
 
+Figura~\ref{fig:modeling-process} mostra o processo de modelagem matemática. Dado um problema do mundo real, nossa primeira tarefa é formular um modelo matemático identificando e nomeando as variáveis dependentes e independentes e fazendo premissas que simplificam o fenômeno o suficiente para deixá-lo matematicamente tratável. Usamos nosso conhecimento sobre o fato e de nossas habilidades matemáticas para obter equações que relacionam as variáveis. Em situações onde não há lei física para nos guiar, precisaremos coletar dados (seja de um dataset disponível ou conduzindo nossos próprios experimentos) e examiná-los na forma de tabela para encontrar padrões. Desta representação numérica de uma função podemos obter uma representação gráfica que pode já sugerir, em alguns casos, fórmulas algébricas.
+\vspace{-0.5cm}\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\columnwidth]{calculus/modeling-process}
+  \caption{Processo de modelagem de um fenômeno}
+  \label{fig:modeling-process}
+  \vspace{-0.5cm}
+\end{figure}
+
+O segundo passo é aplicar matemática para o modelo matemático a fim de derivar conclusões matemáticas. O terceiro passo é transformar as conclusões matemáticas em informações sobre o fenômeno original e oferecer explicações ou fazer previsões. O passo final é testá-las com novos dados reais. Caso as previsões não retratem a realidade, o modelo é refinado (ou um novo modelo é formulado) e o processo é repetido. Vejamos alguns tipos de funções que podem ser usados para modelar relacionamentos observados no mundo real. Discutiremos características e exemplos de aplicações.\vspace{-0.3cm}
+
 \subsubsection{Modelos Lineares}
-\subsubsection{Polinomiais}
+O gráfico de uma \textbf{função linear} é uma linha com o formato declive-intercepto: $y=f(x)=mx+b$, onde $m$ é o declive e $b$ o $y$-intercepto. Ele cresce a uma taxa constante ($m$) e a tangente em qualquer ponto coincide com a linha. A função linear $f(x)=3x-2$ é mostrada na Figura~\ref{fig:linear-model}. Quando $x$ aumenta em $0,1$, o valor de $f(x)$ aumenta $0,3$. Assim, $f(x)$ aumenta 3 vezes mais rápido que $x$. Por isso o declive do gráfico de y=3x-2, pode ser interpretado como a taxa de variação de $y$ com respeito a $x$.
+\vspace{-0.5cm}\begin{figure}[!ht]
+  \centering
+  \subfloat[$f(x)=3x-2$ (gráfico e tabela)\label{fig:linear-model}]{
+    \begin{minipage}{0.32\columnwidth}
+      \centering
+      \includegraphics[width=\columnwidth]{calculus/ex2-1-6-7}
+    \end{minipage}
+    \begin{minipage}{0.33\columnwidth}
+      \centering
+      \begin{tabular}{|c|c|}\hline
+        $x$ & $f(x)=3x-2$\\\hline
+        1.0 & 1.0 \\
+        1.1 & 1.3 \\
+        1.2 & 1.6 \\
+        1.3 & 1.9 \\
+        1.4 & 2.2 \\
+        1.5 & 2.5 \\\hline
+      \end{tabular}
+    \end{minipage}
+  }
+  \subfloat[Exemplo 1\label{fig:2-2-example-1}]{
+    \begin{minipage}{0.32\columnwidth}
+      \centering
+      \includegraphics[width=\columnwidth]{calculus/ex2-1-6-7}
+    \end{minipage}
+  }
+  \caption{}\vspace{-0.5cm}
+\end{figure}
+
+\example{1}
+\begin{enumerate}[label=(\alph*)]
+  \item Como o ar seco move para cima, ele se expande e esfria. Se a temperatura no solo é $20\si\degreeCelsius$ e na altura de $1\si\km$ é $10\si\degreeCelsius$, expresse a temperatura $T$ (em $\si\degreeCelsius$) como função da altura $h$ (em $\si\km$), assumindo que um modelo linear é apropriado.
+  \item Plote o gráfico da função de (a). O que o declive representa?
+  \item Qual é a temperatura na altura de $2,5\si\km$?
+\end{enumerate}
+\solution
+\begin{enumerate}[label=(\alph*)]
+  \item Assumindo $T$ uma função linear de $h$, então $T=mh+b$. O ponto $(0,20)$ está no gráfico, então $20=m\cdot 0 + b = b$. O ponto $(1,10)$ também está no gráfico, então $10=m\cdot 1 + 20$. Assim, $m=-10$. Dessa forma: $T=-10h+20$.
+  \item O gráfico está na Figura~\ref{fig:2-2-example-1}. O declive é $m=-10\si\degreeCelsius/\si\km$, e é a taxa de variação da temperatura com relação à altura.
+  \item Quando $h=2,5$, a temperatura é $T=-10(2,5)+20=-5\si\degreeCelsius$.
+  
+\end{enumerate}
+\exampleEnd
+Se não houver lei ou princípio físico para nos ajudar a formular um modelo, construímos um \textbf{modelo empírico}, baseado apenas nos dados coletados. Investigamos uma curva que se ajusta ao dado no sentido de capturar a tendência dos pontos.
+
+\example{2} A tabela seguinte lista o nível de dióxido de carbono na atmosfera, medido em partes por milhão no Observatório de Mauna Loa de 1980 a 2012. Use os dados para encontrar um modelo do nível de dióxido de carbono.
+\vspace{-0.3cm}\begin{figure}[!ht]
+  \centering
+  \subfloat[$f(x)=3x-2$ (gráfico e tabela)\label{fig:2-2-example2}]{
+    \begin{minipage}{0.44\columnwidth}
+      \centering
+      \begin{tabular}{|c|c|}\hline
+        $x$ & $f(x)=3x-2$\\\hline
+        1.0 & 1.0 \\
+        1.1 & 1.3 \\
+        1.2 & 1.6 \\
+        1.3 & 1.9 \\
+        1.4 & 2.2 \\
+        1.5 & 2.5 \\\hline
+      \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.52\columnwidth}
+      \centering
+      \includegraphics[width=0.7\columnwidth]{calculus/ex2-1-6-7}
+    \end{minipage}
+  }
+  \caption{}\vspace{-0.5cm}
+\end{figure}
+
+\solution Com os dados, podemos criar um gráfico de dispersão, onde $t$ é o tempo (em anos) e $C$ o nível de CO$_2$ (em ppm).
+
+Perceba que os dados se aproximam de uma linha, então é natural que escolhamos o modelo linear. Porém há muitas possíveis linhas que aproximam estes pontos. Qual deles escolheremos? Uma forma é escolher a linha que conecta o primeiro e último pontos. O declive desta linha é: $$\frac{393,8-338,7}{2012-1980}=\frac{55,1}{32}=1,721875\approx 1,722$$
+Nossa equação é (Figura~\ref{fig:2-2-example2-first-last}): $$C-338,7=1,722(t-1980) \text{ ou } C = 1,722t-3070,86$$
+Perceba que nosso modelo dá valores mais altos para a maioria dos níveis CO$_2$. A \textbf{regressão linear} é um método estatístico que fornece um modelo melhor. Pela calculadora gráfica, insira os valores no editor de dados e escolha o comando de regressão linear (Maple contém o comando \verb|fit|/\verb|leastsquare|; Mathematica tem o comando \verb|Fit|). O declive e y-intercepto da linha de regressão são $m=1,71262$ e $b=-3054,14$. Assim nosso modelo de mínimos quadrados para o nível CO$_2$ é $$C=1,71262t-3054,14$$
+Figura~\ref{fig:2-2-example2-regression} mostra a linha de regressão.
+\vspace{-0.5cm}\begin{figure}[!ht]
+  \centering
+  \begin{minipage}{0.49\columnwidth}
+    \includegraphics[width=\columnwidth]{calculus/graph}
+    \caption{Exercício 13}
+    \label{fig:2-2-example2-first-last}
+  \end{minipage}
+  \begin{minipage}{0.49\columnwidth}
+    \includegraphics[width=\columnwidth]{calculus/graph}
+    \caption{Exercício 14}
+    \label{fig:2-2-example2-regression}
+  \end{minipage}\vspace{-1.5cm}
+\end{figure}
+
+\vspace{0.8cm}
+\exampleEnd
+\subsubsection{Funções polinomiais}
+Uma função $P$ é \textbf{polinomial} se $$P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_2x^2+a_1x+a_0$$
+onde $n$ é um inteiro não-negativo e os números $a_0,a_1,a_2,\dots,a_n$ são constantes chamadas de \textbf{coeficientes} do polinômio. O \textbf{grau} do polinômio é o maior $n$ onde $a_n\neq 0$. Por exemplo, o polinômio $P(x)=2x^6-x^4+\frac{2}{5}x^3+\sqrt{2}$ tem grau 6. Um polinômio de grau 1 é da forma $P(x)=mx+b$ (a nossa função linear). Um polinômio de grau 2 é da forma $P(x)=ax^2+bx+c$ e é denominada \textbf{função quadrática}. Seu gráfico é sempre uma parábola obtida transformando a parábola canônica $y=ax^2$. A parábola tem abertura para cima se $a>0$ e para baixo se $a<0$. Um polinômio de grau 3 é da forma P(x)=$ax^3+bx^2+cx+d$, com $a\neq 0$, denominada \textbf{função cúbica}. Figura~\ref{fig:polinomiais} mostra o gráfico de uma função cúbica e polinômios de grau 4 e 5. Veja que o de grau 5 tem quatro mudanças de crescimento, o de grau 4 tem três e o de grau 3 tem duas. Veremos por que eles têm esse formato.
+\begin{figure}[!ht]
+  \centering
+  \subfloat[$y=x^3-x+1$\label{fig:01}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+  \subfloat[$y=x^4-3x^2+x$\label{fig:02}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+  \subfloat[$y=3x^5-25x^3+60x$\label{fig:03}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+  \caption{}\label{fig:polinomiais}
+\end{figure}
 \subsubsection{Funções de potência}
+Uma função de formato $f(x)=x^a$, onde $a$ é uma constante, é denominada \textbf{função de potência}. Considere vários casos:
+
+\noindent \textbf{1) $\boldsymbol{a=n}$, onde $\boldsymbol{n}$ é um inteiro positivo}
+
+Os gráficos 
+
+\noindent \textbf{2) $\boldsymbol{a=1/n}$, onde $\boldsymbol{n}$ é um inteiro positivo}
+
+
+\noindent \textbf{3) $\boldsymbol{a=-1}$}
+
+
 \subsubsection{Funções racionais}
+
+Uma \textbf{função racional} $f$ é a razão de dois polinomiais:
+$$f(x)=\frac{P(x)}{Q(x)}$$
+onde $P$ e $Q$ são polinomiais. O domínio consiste em todos os valores $x$ tais que $Q(x)\neq 0$. Um simples exemplo de uma função racional é a função $f(x)=1/x$, cujo domínio é $\{x:x\neq 0\}$; é a função recíproca desenhada na Figura~\ref{fig:2-1-exercicio10}. A função
+
 \subsubsection{Funções algébricas}
+
+Uma \textbf{função algébrica} $f$ é construída usando operações algébricas (como adição, subtração, multiplicação, divisão, potência e raiz) começando por polinomiais. Uma função racional é uma função algébrica. Outros exemplos são:$$f(x)=\sqrt{x^2+1}\hspace{1cm} g(x)=\frac{x^4-16x^2}{x+\sqrt{x}}+(x-2)\sqrt[3]{x+1}$$
+Um exemplo de função algébrica ocorre na teoria da relatividade. A massa de uma partícula com velocidade $v$ é $$m=f(v)=\frac{m_0}{\sqrt{1-v^2/c^2}}$$
+onde $m_0$ é a massa de repouso da partícula e $c=3.0\times 10^5\si\km/\si\second$ é a velocidade da luz no vácuo.
+
 \subsubsection{Funções trigonométricas}
+
+
 \subsubsection{Funções exponenciais}
+
+A \textbf{função exponencial} é da forma $f(x)=b^x$, onde a base $b$ é uma constante positiva. Os gráficos de $y=2^x$ e $y=(0.5)^x$ estão na Figura~\ref{fig:2-1-exercicio10}. Em ambos os casos o domínio é $(-\infty, \infty)$ e a imagem é $(0,\infty)$.
+
 \subsubsection{Funções logarítmicas}
+
+As \textbf{funções logarítmicas} $f(x)=\log_bx$, onde a base $b$ é uma constante positiva, são funções inversas das funções exponenciais.
+
+\subsubsection{Exercícios}
+
 
 \subsection{Gerando funções a partir de outras}
 \subsubsection{Transformações de funções}
@@ -547,67 +875,67 @@ Um \textbf{modelo matemático} é uma descrição matemática de um fenômeno do
 \subsubsection{Limites infinitos}
 \subsection{Continuidade}
 
-\section{Derivadas}
-\subsection{Derivadas e taxas de variação}
-\subsubsection{Tangentes}
-\subsubsection{Velocidades}
-\subsubsection{Derivadas}
-\subsubsection{Taxas de variação}
-\subsection{Derivadas como funções}
-\subsubsection{Outras notações}
-\subsubsection{Funções não diferenciáveis}
-\subsubsection{Derivadas de ordem mais alta}
-\subsection{Fórmulas de diferenciação}
-\subsubsection{Novas derivadas a partir de outras}
-\subsubsection{Funções potências gerais}
-\subsection{Derivadas de funções trigonométricas}
-\subsection{A regra da cadeia}
-\subsubsection{Prova da regra da cadeia}
-\subsection{Diferenciação implícita}
-\subsection{Taxas de variação nas ciências sociais e naturais}
-\subsubsection{Física}
-\subsubsection{Química}
-\subsubsection{Biologia}
-\subsubsection{Economia}
-\subsubsection{Outras ciências}
-\subsubsection{Uma simples ideia, muitas interpretações}
-\subsection{Taxas relacionadas}
-\subsection{Aproximações lineares e diferenciais}
-\subsubsection{Aplicações em Física}
-\subsubsection{Diferenciais}
-\section{Aplicações da Diferenciação}
-\subsection{Valores máximo e mínimo}
-\subsection{O teorema do valor médio}
-\subsection{Como derivadas afetam a forma de um gráfico}
-\subsubsection{O que $f'$ nos diz sobre $f$}
-\subsubsection{Valores de extremo locais}
-\subsubsection{O que $f''$ nos diz sobre $f$}
-\subsubsection{Limites infinitos no infinito}
-\subsubsection{Definições precisas}
-\subsection{Sumário de desenho de curva}
-\subsection{Problemas de otimização}
-\subsection{Método de Newton}
-\subsection{Antiderivadas}
-
-\section{Integrais}
-\subsection{Áreas e distâncias}
-\subsubsection{O problema da área}
-\subsubsection{O problema da distância}
-\subsection{A integral definida}
-\subsubsection{Avaliando integrais}
-\subsubsection{A Regra do Ponto Médio}
-\subsubsection{Propriedades da integral definida}
-\subsection{Teorema fundamental do cálculo}
-\subsubsection{Diferenciação e Integração como processos inversos}
-\subsection{Integrais indefinidas e o Teorema da Variação Líquida}
-\subsubsection{Integrais indefinidas}
-\subsubsection{Aplicações}
-\subsection{A Regra da Substituição}
-
-
-\section{Funções inversas}
-\section{Técnicas de integração}
-\section{Aplicações de integração}
-\section{Equações diferenciais}
-\section{Equações paramétricas e coordenadas polares}
-\section{Sequências infinitas e séries}
+%\section{Derivadas}
+%\subsection{Derivadas e taxas de variação}
+%\subsubsection{Tangentes}
+%\subsubsection{Velocidades}
+%\subsubsection{Derivadas}
+%\subsubsection{Taxas de variação}
+%\subsection{Derivadas como funções}
+%\subsubsection{Outras notações}
+%\subsubsection{Funções não diferenciáveis}
+%\subsubsection{Derivadas de ordem mais alta}
+%\subsection{Fórmulas de diferenciação}
+%\subsubsection{Novas derivadas a partir de outras}
+%\subsubsection{Funções potências gerais}
+%\subsection{Derivadas de funções trigonométricas}
+%\subsection{A regra da cadeia}
+%\subsubsection{Prova da regra da cadeia}
+%\subsection{Diferenciação implícita}
+%\subsection{Taxas de variação nas ciências sociais e naturais}
+%\subsubsection{Física}
+%\subsubsection{Química}
+%\subsubsection{Biologia}
+%\subsubsection{Economia}
+%\subsubsection{Outras ciências}
+%\subsubsection{Uma simples ideia, muitas interpretações}
+%\subsection{Taxas relacionadas}
+%\subsection{Aproximações lineares e diferenciais}
+%\subsubsection{Aplicações em Física}
+%\subsubsection{Diferenciais}
+%\section{Aplicações da Diferenciação}
+%\subsection{Valores máximo e mínimo}
+%\subsection{O teorema do valor médio}
+%\subsection{Como derivadas afetam a forma de um gráfico}
+%\subsubsection{O que $f'$ nos diz sobre $f$}
+%\subsubsection{Valores de extremo locais}
+%\subsubsection{O que $f''$ nos diz sobre $f$}
+%\subsubsection{Limites infinitos no infinito}
+%\subsubsection{Definições precisas}
+%\subsection{Sumário de desenho de curva}
+%\subsection{Problemas de otimização}
+%\subsection{Método de Newton}
+%\subsection{Antiderivadas}
+%
+%\section{Integrais}
+%\subsection{Áreas e distâncias}
+%\subsubsection{O problema da área}
+%\subsubsection{O problema da distância}
+%\subsection{A integral definida}
+%\subsubsection{Avaliando integrais}
+%\subsubsection{A Regra do Ponto Médio}
+%\subsubsection{Propriedades da integral definida}
+%\subsection{Teorema fundamental do cálculo}
+%\subsubsection{Diferenciação e Integração como processos inversos}
+%\subsection{Integrais indefinidas e o Teorema da Variação Líquida}
+%\subsubsection{Integrais indefinidas}
+%\subsubsection{Aplicações}
+%\subsection{A Regra da Substituição}
+%
+%
+%\section{Funções inversas}
+%\section{Técnicas de integração}
+%\section{Aplicações de integração}
+%\section{Equações diferenciais}
+%\section{Equações paramétricas e coordenadas polares}
+%\section{Sequências infinitas e séries}
