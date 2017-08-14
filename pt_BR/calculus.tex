@@ -815,32 +815,62 @@ Figura~\ref{fig:2-2-example2-regression} mostra a linha de regressão.
 \subsubsection{Funções polinomiais}
 Uma função $P$ é \textbf{polinomial} se $$P(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_2x^2+a_1x+a_0$$
 onde $n$ é um inteiro não-negativo e os números $a_0,a_1,a_2,\dots,a_n$ são constantes chamadas de \textbf{coeficientes} do polinômio. O \textbf{grau} do polinômio é o maior $n$ onde $a_n\neq 0$. Por exemplo, o polinômio $P(x)=2x^6-x^4+\frac{2}{5}x^3+\sqrt{2}$ tem grau 6. Um polinômio de grau 1 é da forma $P(x)=mx+b$ (a nossa função linear). Um polinômio de grau 2 é da forma $P(x)=ax^2+bx+c$ e é denominada \textbf{função quadrática}. Seu gráfico é sempre uma parábola obtida transformando a parábola canônica $y=ax^2$. A parábola tem abertura para cima se $a>0$ e para baixo se $a<0$. Um polinômio de grau 3 é da forma P(x)=$ax^3+bx^2+cx+d$, com $a\neq 0$, denominada \textbf{função cúbica}. Figura~\ref{fig:polinomiais} mostra o gráfico de uma função cúbica e polinômios de grau 4 e 5. Veja que o de grau 5 tem quatro mudanças de crescimento, o de grau 4 tem três e o de grau 3 tem duas. Veremos por que eles têm esse formato.
-\begin{figure}[!ht]
+\vspace{-0.5cm}\begin{figure}[!ht]
   \centering
   \subfloat[$y=x^3-x+1$\label{fig:01}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
   \subfloat[$y=x^4-3x^2+x$\label{fig:02}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
   \subfloat[$y=3x^5-25x^3+60x$\label{fig:03}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
   \caption{}\label{fig:polinomiais}
+\end{figure}\vspace{-0.5cm}
+
+\example{1} Uma bola é solta da cobertura de observação, $450\si\meter$ acima do solo, e sua altura $h$ acima do solo é gravada a um invervalo de 1-segundo na Tabela 2. Encontre um modelo que aproxime aos dados e o use para predizer o tempo em que a bola cai do solo.
+
+\solution Desenhamos um gráfico de dispersão dos dados e vemos que o modelo linear não é adequado. Todavia, parece semelhante a uma parábola, então tentaremos uma função quadrática. Usando uma calculadora ou software com o método dos quadrados mínimos, obtemos o seguinte modelo: $h=449,36+0,96t-4,90t^2$ (Figura~\ref{fig:01}). A bola atinge o solo quando $h=0$, assim: $-4,90t^2+0,96t+449,36 = 0$. Manipulando algebricamente: $$t=\frac{-0,96\pm \sqrt{(0,96)^2-4(-4,90)(449,36)}}{2(-4,90)}$$
+A raiz positiva é $t\approx 9,67$, então a bola atinge o chão cerca de 9,7 segundos a partir do topo do prédio.
+
+\vspace{-0.5cm}\begin{figure}[!ht]
+	\centering
+	\subfloat[$y=x^3-x+1$\label{fig:04}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=x^4-3x^2+x$\label{fig:05}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=3x^5-25x^3+60x$\label{fig:06}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\caption{}\label{fig:polinomiais-exemplo1}
 \end{figure}
+\vspace{-0.7cm}
+\exampleEnd
+\vspace{-0.7cm}
 \subsubsection{Funções de potência}
 Uma função de formato $f(x)=x^a$, onde $a$ é uma constante, é denominada \textbf{função de potência}. Considere vários casos:
 
-\noindent \textbf{1) $\boldsymbol{a=n}$, onde $\boldsymbol{n}$ é um inteiro positivo}
+\noindent \textbf{1) $\boldsymbol{a=n}$, onde $\boldsymbol{n}$ é um inteiro positivo -- } os gráficos de $f(x)=x^n$ para $n=1,2,3,4$ e 5 são mostrados na Figura~\ref{fig:01} (polinômios de um termo). Sabemos o formato dos gráficos de $y=x$ (uma linha sobre a origem com declive 1) e $y=x^2$ (uma parábola).
+\vspace{-0.5cm}\begin{figure}[!ht]
+	\centering
+	\subfloat[$y=x^3-x+1$\label{fig:07}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=x^4-3x^2+x$\label{fig:08}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=3x^5-25x^3+60x$\label{fig:09}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\caption{}\label{fig:power-functions}\vspace{-0.3cm}
+\end{figure}
+A forma geral do gráfico] de $f(x) = x^n$  depende se $n$ é par ou ímpar. Se $n$ é par, então $f(x)=x^n$ é uma função par e seu gráfico é similar a uma parábola $y=x^2$. Se $n$ é ímpar, $f(x)=x^n$ é ímpar e seu gráfico é similar a $y=x^3$. À medida em que $n$ cresce, o gráfico fica mais achatado perto de 0 e mais íngreme quando $|x|\geq 1$. 
 
-Os gráficos 
-
-\noindent \textbf{2) $\boldsymbol{a=1/n}$, onde $\boldsymbol{n}$ é um inteiro positivo}
-
+\noindent \textbf{2) $\boldsymbol{a=1/n}$, onde $\boldsymbol{n}$ é um inteiro positivo -- } a função $f(x)=x^{1/n}=\sqrt[n]{x}$ é uma \textbf{função raiz}. Para $n=2$, ele é a função raiz quadrada $f(x)=\sqrt{x}$, cujo domínio é $[0,\infty)$ e cujo gráfico é a metade superior da parábola $x=y^2$. Para valores pares de $n$, o gráfico de $y=\sqrt[n]{x}$ é semelhante a $y=\sqrt{x}$. Para $n=3$, nós temos a função de raiz cúbica $f(x)=\sqrt[3]{x}$, cujo domínio é $\mathds{R}$ é a metade superior da parábola $x=y^2$. O gráfico de $y=\sqrt[n]{x}$ é similar ao de $y=\sqrt[3]{n}$.
+\vspace{-0.5cm}\begin{figure}[!ht]
+	\centering
+	\subfloat[$y=x^3-x+1$\label{fig:10}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=x^4-3x^2+x$\label{fig:11}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=3x^5-25x^3+60x$\label{fig:12}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\caption{}\label{fig:root-functions}\vspace{-0.2cm}
+\end{figure}
 
 \noindent \textbf{3) $\boldsymbol{a=-1}$}
+O gráfico da \textbf{função recíproca} $f(x) = x^{-1} = 1/x$ está mostrado na Figura~\ref{fig:01}. Seu gráfico tem equação $y=1/x$, ou $xy=1$, e é uma hipérbole com os eixos das coordenadas como suas assíntotas. Esta função aparece em Física e Química como na Lei de Boyle, que diz que, quando a temperatura é constante, o volume $V$ de um gás é inversamente proporcional à pressão $P$ ($V=C/P$), onde $C$ é constante. Assim o gráfico de $V$ como função de $P$ tem o mesmo formato do lado direito da Figura~\ref{fig:01}. 
 
+Funções potência também são usadas para modelar relacionamentos espécie-área, iluminação como função da distância da fonte de luz e período de revolução do planeta como função da distância do sol.
 
+\vspace{-0.2cm}
 \subsubsection{Funções racionais}
 
-Uma \textbf{função racional} $f$ é a razão de dois polinomiais:
-$$f(x)=\frac{P(x)}{Q(x)}$$
-onde $P$ e $Q$ são polinomiais. O domínio consiste em todos os valores $x$ tais que $Q(x)\neq 0$. Um simples exemplo de uma função racional é a função $f(x)=1/x$, cujo domínio é $\{x:x\neq 0\}$; é a função recíproca desenhada na Figura~\ref{fig:2-1-exercicio10}. A função
+Uma \textbf{função racional} $f$ tem formato $\displaystyle f(x)=\frac{P(x)}{Q(x)}$, onde $P$ e $Q$ são polinômios. O domínio são todos os valores $x$ tais que $Q(x)\neq 0$. Um simples exemplo de uma função racional é a função $f(x)=1/x$, cujo domínio é $\{x:x\neq 0\}$; é a função recíproca desenhada na Figura~\ref{fig:2-1-exercicio10}. A função $\displaystyle f(x)=\frac{2x^4-x^2+1}{x^2-4}$ é uma função racional com domínio $\{x:x\neq \pm 2\}$ (Figura~\ref{fig:01}).
 
+\vspace{-0.3cm}
 \subsubsection{Funções algébricas}
 
 Uma \textbf{função algébrica} $f$ é construída usando operações algébricas (como adição, subtração, multiplicação, divisão, potência e raiz) começando por polinomiais. Uma função racional é uma função algébrica. Outros exemplos são:$$f(x)=\sqrt{x^2+1}\hspace{1cm} g(x)=\frac{x^4-16x^2}{x+\sqrt{x}}+(x-2)\sqrt[3]{x+1}$$
@@ -849,14 +879,45 @@ onde $m_0$ é a massa de repouso da partícula e $c=3.0\times 10^5\si\km/\si\sec
 
 \subsubsection{Funções trigonométricas}
 
+A variável independente de uma \textbf{função trigonométrica} é o ângulo, relacionando-o com os lados de um triângulo. Tais funções (ex: seno, cosseno, tangente, secante, cossecante, cotangente, etc) são importantes para fenômenos periódicos. Neste documento, o ângulo é em radianos ($180\si\degree=\pi \text{ rad}=3,14159\dots$). O domínio do seno e cosseno é $(-\infty, \infty)$ e a imagem e $\left[-1,1\right]$, ou seja, $|\sin x| \leq 1$ e $|\cos x| \leq 1$. Os zeros da função $\sin x$ ocorrem em múltiplos inteiros de $\pi$, ou seja, $\sin x=0$ quando $x=n\pi, n\in \mathds{N}$.
+
+Seno e cosseno são funções periódicas, ou seja, $\sin(x+2n\pi)=\sin x$ e $\cos(x+2n\pi)=\cos x$ para $n\in\mathds{N}$. Isto é interessante para modelar processos repetitivos como ondas e vibrações. 
+
+\example{5} Qual é o domínio da função $\displaystyle f(x)=\frac{1}{1-2\cos x}$? 
+
+\solution Esta função é definida para todos os valores exceto o que faz o denominador 0. Os valores proibidos de $x$ são: $$1-2\cos x = 0\Leftrightarrow \cos x=\frac{1}{2} \Leftrightarrow x = \frac{\pi}{3}+2n\pi \text{ ou } x=\frac{5\pi}{3}+ 2n\pi$$
+
+\exampleEnd
+
+A função tangente é relacionada ao seno e coseno pela equação $\tan x = \sin x/\cos x$ e seu gráfico está mostrado na Figura~\ref{fig:01}. Ele é indefinido quando $\cos x = 0$, ou seja, quando $x=\pm\pi/2,\pm 3\pi/2,\dots$. Sua imagem é $(-\infty, \infty)$. Perceba que a tangente tem período $\pi$: $\tan x+n\pi = \tan x$.
 
 \subsubsection{Funções exponenciais}
 
-A \textbf{função exponencial} é da forma $f(x)=b^x$, onde a base $b$ é uma constante positiva. Os gráficos de $y=2^x$ e $y=(0.5)^x$ estão na Figura~\ref{fig:2-1-exercicio10}. Em ambos os casos o domínio é $(-\infty, \infty)$ e a imagem é $(0,\infty)$.
-
+A \textbf{função exponencial} é da forma $f(x)=b^x$, onde a base $b$ é uma constante positiva. Os gráficos de $y=2^x$ e $y=(0.5)^x$ estão na Figura~\ref{fig:2-1-exercicio10}. Em ambos os casos o domínio é $(-\infty, \infty)$ e a imagem é $(0,\infty)$. Crescimento populacional ($b > 1$) e decaimento radioativo ($b < 1$) são aplicações.
+\vspace{-0.5cm}\begin{figure}[!ht]
+	\centering
+	\subfloat[$y=x^3-x+1$\label{fig:13}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=x^4-3x^2+x$\label{fig:14}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=3x^5-25x^3+60x$\label{fig:15}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\caption{}\label{fig:exponential-functions}
+\end{figure}
 \subsubsection{Funções logarítmicas}
 
-As \textbf{funções logarítmicas} $f(x)=\log_bx$, onde a base $b$ é uma constante positiva, são funções inversas das funções exponenciais.
+As \textbf{funções logarítmicas} $f(x)=\log_bx$, onde a base $b$ é uma constante positiva, são funções inversas das funções exponenciais. Figura~\ref{fig:01} mostra os gráficos de 4 funções logarítmicas com várias bases. Em cada caso, o domínio é $(0,\infty)$, a imagem é $(-\infty, \infty)$ e a função cresce devagar quando $x > 1$.
+\example{Classifique as seguintes funções de acordo com os tipos discutidos}
+\begin{enumerate}[label=(alph*)]
+	\item $f(x) = 5^x$
+	\item $g(x) = x^5$
+	\item $h(x) = \frac{1+x}{1-\sqrt{x}}$
+	\item $u(t) = 1-t+ 5t^4$
+\end{enumerate}
+\solution
+\begin{enumerate}[label=(alph*)]
+	\item $f(x)=5^x$ é uma função exponencial
+	\item $g(x)=x^5$ é uma função de potência, também considerado como um polinômio de grau 5.
+	\item $h(x) = \frac{1+x}{1-\sqrt{x}}$ é uma função algébrica.
+	\item $u(t)= 1-t+5t^2$  é um polinômio de grau 4
+\end{enumerate}
 
 \subsubsection{Exercícios}
 
