@@ -900,19 +900,23 @@ A \textbf{função exponencial} é da forma $f(x)=b^x$, onde a base $b$ é uma c
 	\subfloat[$y=x^4-3x^2+x$\label{fig:14}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
 	\subfloat[$y=3x^5-25x^3+60x$\label{fig:15}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
 	\caption{}\label{fig:exponential-functions}
-\end{figure}
+\end{figure}\vspace{-0.5cm}
 \subsubsection{Funções logarítmicas}
 
 As \textbf{funções logarítmicas} $f(x)=\log_bx$, onde a base $b$ é uma constante positiva, são funções inversas das funções exponenciais. Figura~\ref{fig:01} mostra os gráficos de 4 funções logarítmicas com várias bases. Em cada caso, o domínio é $(0,\infty)$, a imagem é $(-\infty, \infty)$ e a função cresce devagar quando $x > 1$.
-\example{Classifique as seguintes funções de acordo com os tipos discutidos}
-\begin{enumerate}[label=(alph*)]
-	\item $f(x) = 5^x$
-	\item $g(x) = x^5$
-	\item $h(x) = \frac{1+x}{1-\sqrt{x}}$
-	\item $u(t) = 1-t+ 5t^4$
+
+\example{6} Classifique as seguintes funções de acordo com os tipos discutidos
+\begin{enumerate}[label=(\alph*)]
+  \begin{tabular}{@{}m{\dimexpr.5\columnwidth-.5\columnsep}m{\dimexpr.5\columnwidth-.5\columnsep}@{}}
+    \item $f(x) = 5^x$&
+    \item $g(x) = x^5$\\
+    \item $\displaystyle h(x) = \frac{1+x}{1-\sqrt{x}}$&
+    \item $u(t) = 1-t+ 5t^4$
+  \end{tabular}
 \end{enumerate}
+
 \solution
-\begin{enumerate}[label=(alph*)]
+\begin{enumerate}[label=(\alph*)]
 	\item $f(x)=5^x$ é uma função exponencial
 	\item $g(x)=x^5$ é uma função de potência, também considerado como um polinômio de grau 5.
 	\item $h(x) = \frac{1+x}{1-\sqrt{x}}$ é uma função algébrica.
@@ -921,9 +925,38 @@ As \textbf{funções logarítmicas} $f(x)=\log_bx$, onde a base $b$ é uma const
 
 \subsubsection{Exercícios}
 
+Classifique cada função como função potência, função raiz, polinomial (diga o grau), função racional, função algébrica, função trigonométrica, função exponencial ou logarítmica.
+
+\begin{enumerate}[label=\textbf{\arabic*.},leftmargin=*]
+  \item \begin{enumerate}
+    \item $f(x)=\log_2x$
+    \item $g(x)=\sqrt[4]{x}$
+    \item $h(x)=\frac{2x^3}{1-x^2}$
+    \item $u(t) = 1-1,1t + 2,54t^2$
+    \item $v(t) = 5^t$
+    \item $w(\theta) = \sin\theta \cos^2\theta$
+  \end{enumerate}
+  \item \begin{enumerate}
+    \item $y = \pi^x$
+    \item $y = x^\pi$
+    \item $y = x^2(2-x^3)$
+    \item $y = \tan t - \cos t$
+    \item $y = \frac{s}{1+s}$
+    \item $y = \frac{\sqrt{x^3-1}}{1+\sqrt[3]{x}}$
+  \end{enumerate}
+  \item \begin{enumerate}
+    \item $y=x^2$
+    \item $y=x^5$
+  \end{enumerate}
+\end{enumerate}
+
 
 \subsection{Gerando funções a partir de outras}
+
 \subsubsection{Transformações de funções}
+
+\textbf{Translações:} se $c$ é um número positivo, então o gráfico de $y=f(x)+c$ é o gráfico de $y=f(x)$ movido para cima por uma distância de $c$ unidades. Se $g(x) = f(x-c)$, onde $c>0$, o valor de $g$ em $x$ é o mesmo do valor de $f$ em $x-c$ ($c$ unidades à esquerda de $x$).zz
+
 \subsubsection{Combinações de funções}
 
 \subsection{O limite de uma função}
