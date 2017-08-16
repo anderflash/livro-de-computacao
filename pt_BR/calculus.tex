@@ -955,9 +955,71 @@ Classifique cada função como função potência, função raiz, polinomial (di
 
 \subsubsection{Transformações de funções}
 
-\textbf{Translações:} se $c$ é um número positivo, então o gráfico de $y=f(x)+c$ é o gráfico de $y=f(x)$ movido para cima por uma distância de $c$ unidades. Se $g(x) = f(x-c)$, onde $c>0$, o valor de $g$ em $x$ é o mesmo do valor de $f$ em $x-c$ ($c$ unidades à esquerda de $x$).zz
+\textbf{Translações:} podemos transladar no eixo $y$. Se $c$ é um número positivo, então o gráfico de $y=f(x)+c$ é o gráfico de $y=f(x)$ movido para cima por uma distância de $c$ unidades. Podemos também transladar no eixo $x$. Se $g(x) = f(x-c)$, onde $c>0$, o valor de $g$ em $x$ é o mesmo do valor de $f$ em $x-c$ ($c$ unidades à esquerda de $x$).
+
+\noindent\textbf{Escala e reflexão:} podemos esticar, encolher e até refletir o gráfico. Se $c > 1$, então o gráfico de $y=cf(x)$ é o gráfico de $f(x)$ esticado por um fator de $c$ unidades na direção vertical. O gráfico de $y=-f(x)$ é o gráfico de $y=f(x)$ refletido sobre o eixo $x$ pois cada ponto $(x,y)$ agora se torna $(x,-y)$. $y=f(xc)$ comprime o gráfico por um fator $c$, pois considerando $g(x) = f(xc)$, $g(1)=f(c)$ e $g(2)=f(2c)$ (considerando $c>1$). Figura~\ref{fig:01} mostra a translação, escala e reflexão.
+
+\vspace{-0.5cm}\begin{figure}[!ht]
+	\centering
+	\subfloat[$y=x^3-x+1$\label{fig:16}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=x^4-3x^2+x$\label{fig:17}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+\caption{}\label{fig:transforming-functions}
+\end{figure}\vspace{-0.5cm}
+
+\example{1} Dado o gráfico de $y=\sqrt{x}$, use transformações para desenhar $y=\sqrt{x}-2$, $y=\sqrt{x-2}$, $y=\sqrt{x}$, $y=2\sqrt{x}$ e $y=\sqrt{-x}$.
+\solution O gráfico de $y=\sqrt{x}$ está na Figura~\ref{fig:01}. Obtemos $y=\sqrt{x}-2$ de $y=\sqrt{x}$ movend 2 unidades para baixo, $y=\sqrt{x-2}$ movendo 2 unidades para a direita, $y=2\sqrt{x}$ esticando verticalmente pelo fator 2 e $y=\sqrt{-x}$ refletindo sobre o eixo $y$.
+
+\vspace{-0.5cm}\begin{figure}[!ht]
+	\centering
+	\subfloat[$y=x^3-x+1$\label{fig:18}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\subfloat[$y=x^4-3x^2+x$\label{fig:19}]{\includegraphics[width=.33\columnwidth]{calculus/ex2-1-6-7}}
+	\caption{}\label{fig:transforming-functions-example1}
+\end{figure}\vspace{-0.5cm}
+
+\exampleEnd
+
+\example{2} Desenhe o gráfico da função $f(x) = x^2 + 6x + 10$
+\solution Completando o quadrado perfeito, $y=f(x)=(x+3)^2+1$. Significa que podemos começar com o gráfico $y=x^2$, mover 3 unidades para a esquerda ($y=(x+3)^2$) e por fim mover 1 unidade para cima.
+
+\example{3} Desenhe os gráficos das seguintes funções:
+\begin{enumerate}
+	\item $y=\sin 2x$
+	\item $y=1-\sin x$
+\end{enumerate}
+\solution 
+\begin{enumerate}
+	\item Obtemos o gráfico de $y=\sin 2x$ de $y=\sin x$ encolhendo por um fator de 2. O período passa de $2\pi$ para $\pi$.
+	\item Para obter o gráfico de $y=1-\sin x$, refletimos $y=\sin x$ e o movemos 1 unidade para cima.
+\end{enumerate}
+
+\example{4} Figura~\ref{fig:01} mostra os gráficos do número de horas de luz por dia como função do tempo em várias latitudes. Dado que Filadélfia está localizado aproximadamente $40\si\degree N$ de latitude, encontre uma função que modele o fenômeno em Filadélfia.
+
+\solution Perceba que a função se assemelha a uma senoide movida e esticada. Olhando a curva azul vemos que 
 
 \subsubsection{Combinações de funções}
+
+Duas funções $f$ e $g$ podem ser combinadas para formar novas funções, $f+g$, $f-g$, $fg$ e $f/g$ de uma maneira similar como adicionamos, subtraímos, multiplicamos e dividimos números. As funções soma e diferença são $(f+g)(x) = f(x)+g(x)$ e $(f-g)(x)=f(x)-g(x)$. Se o domínio de $f$ for $A$ e o de $g$ for $B$, então o domínio de $f+g$ é a intersecção $A\cap B$, pois ambos $f(x)$ e $g(x)$ precisam estar definidos. Por exemplo, o domínio de $f(x) = \sqrt{x}$ é $A=[0,\infty)$, e o domínio de $g(x) = \sqrt{2-x}$ é $B=(-\infty, 2]$, então o domínio de $(f+g)(x)=\sqrt{x}+ \sqrt{2-x}$ é $A\cap B=[0,2]$.
+
+Similarmente, as funções produto e quociente são definidas por $(fg)(x)=f(x)g(x)$ e $\displaystyle\left(\frac{f}{g}\right)(x)=\frac{f(x)}{g(x)}$. O domínio de $fg$ é $A\cap B$. Como não permitimos divisão por 0, o domínio de $f/g é \{x\in A\cap B: g(x)\neq 0\}$. Por exemplo, se $f(x)=x^2 e g(x) = x-1$, então o domínio da função racional $(f/g)(x)=x^2/(x-1)$ é $\{x : x\neq 1\}$, ou $(-\infty, 1) \cup (1, \infty)$.
+
+\textbf{Composição} é outra forma de combinar duas funções. Por exemplo, suponha que $y=f(u)=\sqrt{u}$ e $u = g(x) = x^2+1$. Como $y$ é uma função de $u$, que é uma função de $x$, então $y$ é uma função de $x$: $y=f(u)=f(g(x))=f(x^2+1)=\sqrt{x^2+1}$. O símbolo é $(f\circ g)(x)=f(g(x))$. O domínio de $f\circ g$ é o conjunto de todo $x$ no domínio de $g$ tal que $g(x)$ está no domínio de $g$.
+
+\example{6} Se $f(x) = x^2$ e $g(x) = x-3$, encontre as funções compostas $f\circ g$ e $g\circ f$.
+
+\solution $$\begin{aligned}
+	f\circ g &= f(g(x)) = f(x-3) = (x-3)^2\\
+	g\circ f &= g(f(x)) = g(x^2) = x^2-3
+\end{aligned}$$
+
+\exampleEnd
+
+\example{7} Se $f(x)= \sqrt{x}$ e $g(x) = \sqrt{2-x}$, encontre cada uma das seguintes funções e seus domínios
+\begin{enumerate}
+	\item f\circ g
+	\item g\circ f
+	\item 
+\end{enumerate}
+
 
 \subsection{O limite de uma função}
 
